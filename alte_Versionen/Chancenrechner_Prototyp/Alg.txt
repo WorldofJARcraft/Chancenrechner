@@ -1,0 +1,149 @@
+JTextArea Schütze = new JTextArea();
+        int häuf = 0;
+        int welch = 0;
+        int schüsse;
+        if (jRadioButton1.isSelected()) {
+            schüsse = 10;
+        } else {
+            schüsse = 20;
+        }
+        int Punkte = 10;
+        int maxPkt = schüsse * Punkte;
+        int aktuell = 0;
+        int[] zahl = new int[11];
+        for (int i = 0; i < 11; i++) {
+            zahl[i] = 0;
+        }
+        int gesamt = 0;
+
+        int[] ergebnisse = new int[schüsse];
+        boolean falsch = true;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Zielpunkte:");
+        int ziel = scanner.nextInt();
+        if (ziel > maxPkt || ziel < 0) {
+            System.out.println("Eingabefehler.");
+        } else {
+            int optimum = ziel / schüsse;
+
+            zahl[optimum] = schüsse;
+
+            System.out.println("Ihr Ziel: durschschnittlich " + optimum + " Punkte.");
+            Schütze.append("Ihr Ziel: durschschnittlich " + optimum + " Punkte.");
+            for (int i = 0; i < schüsse; i++) {
+                while (falsch) {
+                    System.out.print("Schuss " + (i + 1) + ": ");
+                    aktuell = scanner.nextInt();
+                    if (aktuell >= 0 && aktuell <= 10) {
+                        falsch = false;
+                    } else {
+                        System.out.println("Eingabefehler. Frage erneut ab.");
+                    }
+                }
+                falsch = true;
+                gesamt += aktuell;
+                ergebnisse[i] = aktuell;
+                System.out.println("Ergebnisse der Schüsse: ");
+                Schütze.append("Ergebnisse der Schüsse: ");
+                for (int j = 0; j <= i; j++) {
+                    System.out.print(ergebnisse[j] + ";");
+                    Schütze.append(ergebnisse[j] + ";");
+                }
+                System.out.println("");
+                if (gesamt >= ziel) {
+                    System.out.println("Mit " + gesamt + " Punkten haben Sie Ihr Ziel von " + ziel + " Punkten erreicht. Ihnen stehen noch " + (schüsse - (i + 1)) + " Schüsse zur Verfügung.");
+                    Schütze.append("Mit " + gesamt + " Punkten haben Sie Ihr Ziel von " + ziel + " Punkten erreicht. Ihnen stehen noch " + (schüsse - (i + 1)) + " Schüsse zur Verfügung.");
+                    break;
+                } else {
+                    System.out.println("Bisherige Gesamtpunktzahl: " + gesamt + ", noch zu erreichen: " + (ziel - gesamt) + " Punkte.");
+                    Schütze.append("Bisherige Gesamtpunktzahl: " + gesamt + ", noch zu erreichen: " + (ziel - gesamt) + " Punkte.");
+                }
+                if (aktuell < optimum) {
+                    if (optimum > 0) {
+                        zahl[optimum]--;
+                    }
+                    if (zahl[aktuell] > 0) {
+                        zahl[aktuell]--;
+                    } else {
+
+                        if (optimum + (optimum - aktuell) >= 0 && optimum + (optimum - aktuell) <= 10) {
+                            zahl[optimum + (optimum - aktuell)]++;
+                        } else {
+                            System.out.println("Ein Fehler ist aufgetreten. Die Empfehlung kann fehlerhaft sein.");
+                            Schütze.append("Ein Fehler ist aufgetreten. Die Empfehlung kann fehlerhaft sein.");
+                            welch = optimum + (optimum - aktuell);
+                            while (welch > 10) {
+                                welch--;
+                                häuf++;
+                            }
+                            zahl[welch] += häuf;
+                        }
+                    }
+                }
+                if (aktuell > optimum) {
+                    if (optimum > 0) {
+                        zahl[optimum]--;
+                    }
+                    if (zahl[aktuell] > 0) {
+                        zahl[aktuell]--;
+                    } else {
+
+                        if (optimum - (aktuell - optimum) >= 0 && optimum - (aktuell - optimum) <= 10) {
+                            zahl[optimum - (aktuell - optimum)]++;
+                        } else {
+                            System.out.println("Ein Fehler ist aufgetreten. Die Vorhersage kann fehlerhaft sein.");
+                            Schütze.append("Ein Fehler ist aufgetreten. Die Empfehlung kann fehlerhaft sein.");
+                            welch = optimum - (aktuell - optimum);
+                            while (welch < 0) {
+                                welch++;
+                                häuf++;
+                            }
+                            zahl[welch] += häuf;
+                        }
+                    }
+                }
+                if (optimum > 0) {
+                    zahl[optimum]--;
+                }
+                for (int j = 0; j < 11; j++) {
+
+                    if (zahl[j] != 0) {
+                        System.out.println("Sie müssen noch " + zahl[j] + " mal " + j + " Treffer erzielen.");
+                        Schütze.append("Sie müssen noch " + zahl[j] + " mal " + j + " Treffer erzielen.");
+                    }
+                }
+                zahl = sortieren(zahl, schüsse - i, optimum);
+                for (int j = 0; j < 11; j++) {
+
+                    if (zahl[j] != 0) {
+                        System.out.println("Sie müssen noch " + zahl[j] + " mal " + j + " Treffer erzielen.");
+                        Schütze.append("Sie müssen noch " + zahl[j] + " mal " + j + " Treffer erzielen.");
+                    }
+                }
+                Schütze.setText("");
+            }
+            Schütze.setText("");
+            System.out.println("Sie haben " + gesamt + " Punkte erzielt.");
+            Schütze.append("Sie haben " + gesamt + " Punkte erzielt.");
+            if (gesamt >= ziel) {
+                System.out.println("Herzlichen Glückwunsch, Sie haben Ihre Zielpunktzahl erreicht.");
+                Schütze.append("Herzlichen Glückwunsch, Sie haben Ihre Zielpunktzahl erreicht.");
+            } else {
+                System.out.println("Sie haben Ihr Ziel leider nicht erreicht.");
+                Schütze.append("Sie haben Ihr Ziel leider nicht erreicht.");
+            }
+        }
+static private int[] sortieren(int[] zahl, int Rest, int optimum) {
+        //Sortieren des Arrays
+        //1. Fall: Ausgleichende Ziele
+        for (int i = 0; i < optimum; i++) {
+            while (zahl[i] > 0 && zahl[optimum + (optimum - i)] > 0) {
+                System.out.println(i + ";" + (optimum + (optimum - i)));
+                zahl[i]--;
+                zahl[optimum + (optimum - i)]--;
+                zahl[optimum] += 2;
+            }
+        }
+
+        return zahl;
+    }

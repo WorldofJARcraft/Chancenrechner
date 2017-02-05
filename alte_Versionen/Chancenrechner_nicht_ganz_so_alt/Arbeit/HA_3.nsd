@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;Prozedur Empfehlungen - Hauptalgorithmus des Programms Chancenrechner&#34;,,&#34;Teil 3&#34;" comment="" type="program" style="nice">
+ <children>
+
+<alternative text="&#34;i = schuesse - 2 &#38;&#38; (ziel - gesamt) &#60; 11 &#38;&#38; !nichtmehrzuerreichen&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<instruction text="&#34;Schreib &#34;&#34;Sie muessen noch &#34;&#34; + (ziel - gesamt) + &#34;&#34; Ringe erzielen. Dies ist Ihr letzter Schuss.&#34;&#34;&#34;" comment="" color="FFFF80" rotated="1"></instruction>
+ </qTrue>
+ <qFalse>
+
+<alternative text="&#34;i != schuesse - 1&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<instruction text="&#34;Schreib &#34;&#34;Naechster Schuss:&#34;&#34;&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+<alternative text="&#34;(schuesse - (i + 2)) * 10 + gesamt &#62;= ziel&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<alternative text="&#34;(ziel - ((schuesse - (i + 2)) * 10 + gesamt)) &#62; 10&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<instruction text="&#34;Schreib &#34;&#34; mindestens &#34;&#34; + (ziel - ((schuesse - (i + 2)) * 10 + gesamt)) + &#34;&#34; Ringe;&#34;&#34;&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qTrue>
+ <qFalse>
+
+<alternative text="&#34;(ziel - ((schuesse - (i + 2)) * 10 + gesamt)) &#62; 10&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<instruction text="&#34;Schreib &#34;&#34; mindestens &#34;&#34; + (ziel - ((schuesse - (i + 2)) * 10 + gesamt)) + &#34;&#34; Ringe;&#34;&#34;&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qFalse>
+</alternative>
+<instruction text="&#34;j &#60;- 0&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+<while text="&#34;SOLANGE zahl [j] = 0 &#38;&#38; j &#60; 10&#34;" comment="" color="FFFF80">
+ <qWhile>
+
+<instruction text="&#34;j &#60;- j + 1&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+ </qWhile>
+</while>
+<alternative text="&#34;(j &#60; 10 || zahl[10] &#62; 0)&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<alternative text="&#34; j != (ziel - ((schuesse - (i + 2)) * 10 + gesamt))&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<instruction text="&#34;Schreib &#34;&#34;Empfehlung: &#34;&#34; + j + &#34;&#34; oder mehr Ringe.&#34;&#34;&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<instruction text="&#34;i &#60;- i + 1&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qFalse>
+</alternative>
+ </children>
+</root>

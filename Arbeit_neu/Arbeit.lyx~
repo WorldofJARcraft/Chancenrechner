@@ -1,0 +1,3417 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\appto\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
+\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w
+\do\x\do\y\do\z}
+\definecolor{lachsrot}{rgb}{1,.5,.5}
+\definecolor{grellgelb}{rgb}{1,1,.5}
+\definecolor{hellgrün}{rgb}{.5,1,.5}
+\definecolor{türkis}{rgb}{.5,1,1}
+\definecolor{pink}{rgb}{1,.5,.753}
+\definecolor{dschungel}{cmyk}{0.99,0,0.52,0.2}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+Einleitung
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Beschreibung der Problematik und des prinzipiellen Lösungsansatzes der Arbeit
+\end_layout
+
+\begin_layout Standard
+\noindent
+Für einen Sportschützen ist der Wettkampf eine schwierige und anstrengende
+ Situation.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Einerseits ist der Wettkampf eine hohe sportliche Herausforderung, dessen
+ Ausgang durch unzählige Details wie den korrekten Stand oder die richtige
+ Atemtechnik beeinflusst wird.
+ Auch das Treffen der Zielscheibe möglichst nah am Zentrum ist eine schwierige
+ Aufgabe.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Jedoch gibt es auch eine nicht zu unterschätzende geistige Komponente.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Nehmen wir an, ein Schütze soll in einem Wettkampf bei einer Serie von 10
+ Schuss 88 Ringe
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der Wert des aktuellen Schusses wird in Ringen gemessen.
+ Die Zielscheibe, auf die geschossen wird, besteht aus 10 Kreisen, die immer
+ den gleichen Abstand voneinander haben, den sogenannten Ringen.
+ Trifft ein Schuss die Scheibe nicht, wird er mit 0 Ringen gewertet, trifft
+ er zwischen dem äußersten und dem zweitäußersten Ring, wird er als 1 gewertet
+ usw.
+\end_layout
+
+\end_inset
+
+ erzielen, d.h.
+ die Summe seiner Treffer soll mindestens 88 sein.
+ Nun schießt er mit seinen ersten vier Schuss folgendermaßen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Einleitung_BSP_1.PNG
+	height 7.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Beispielschussfolge eines Schützen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Frage, die jeder Schütze sich im Wettkampf bei jedem Schuss stellt,
+ ist folgende: Welche Ringzahl muss ich mindestens treffen, um mein Ziel
+ noch erreichen zu können?
+\end_layout
+
+\begin_layout Standard
+\noindent
+Natürlich könnte ein Schütze die Frage umgehen, in dem er bei jedem Schuss
+ versucht, die Optimalzahl von 10 Ringen zu schießen.
+ Jedoch würde dies den Schützen unter viel zu hohen Druck setzen, da er
+ nicht immer eine 10 schießen muss.
+ Um in diesem Beispiel die 88 Ringe zu erreichen, genügt ein Durchschnitt
+ von 8,8 Ringen pro Schuss, er muss also nicht bei jedem Schuss die 10 treffen.
+ Dies ist zudem in der Praxis schwer möglich.
+ Der Schütze würde irgendwann bei einem der Schüsse niedriger als 10 schießen
+ und vielleicht frustriert aufgeben, weil er denkt, er könnte sein Ziel
+ nicht mehr erreichen.
+ Im Beispiel würde ein Schütze, der so denkt, also versuchen, bei den nächsten
+ 6 Schüssen jedes Mal eine 10 zu schießen.
+ Würde ihm dies gelingen, erreichte er 89 Punkte statt der anvisierten 88
+ und fragt sich zurecht, warum er sich selbst unter den hohen Druck gestellt
+ und bei jedem Schuss versucht hat, eine 10 zu treffen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Diese Situation kann mit einigen Berechnungen vermieden werden.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Im Beispiel sind mit 6 Schuss noch 59 Ringe zu treffen.
+ Dividiert man nun 59 durch 6, erhält man aufgerundet 10.
+ Daraus ergibt sich die Empfehlung für die nächsten 6 Schüsse: möglichst
+ jedes Mal 10 Ringe schießen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Jedoch kann man mit den fünf übernächsten Schüssen, wenn man jedes Mal die
+ Höchstringzahl von 10 Ringen schießt, maximal 50 Ringe erzielen.
+ Da noch 59 Ringe zu schießen sind, ist der minimal beim nächsten Schuss
+ zu erreichende Wert 9.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ein Schütze, der dies gerechnet hat, weiß nun: er muss beim nächsten Schuss
+ auf jeden Fall eine 9 schießen, versucht aber, die 10 zu treffen.
+ Damit setzt er sich unter geringeren Druck, als wenn er versuchen würde,
+ bei jedem folgenden Schuss eine 10 zu schießen, und hat so die größere
+ Erfolgsaussicht.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die mentale Schwierigkeit für einen Schützen im Wettkampf besteht also darin,
+ diese Überlegungen ohne Taschenrechner unter Zeitdruck bei jedem Schuss
+ neu auszuführen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Ziel dieser Arbeit war es, ein Programm zu entwickeln, welches den Sportschü
+tzen bei diesen Überlegungen entlastet.
+ Da solche Hilfsmittel im Wettkampf nicht zugelassen sind, soll das Programm
+ den Schützen also im Training unterstützen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programm soll, während der Schütze unter Wettkampfbedingungen schießt,
+ für ihn nützliche Informationen ausgeben, zum Beispiel die minimal nötige
+ und die empfohlene Ringzahl für den nächsten Schuss, außerdem soll er eine
+ Übersicht über die bisherige Leistung in Form einer bisherigen Gesamtringzahl
+ sowie der Information, wo genau die letzten Schüsse getroffen haben, erhalten.
+ Außerdem soll der Schütze jederzeit genau wissen, wie viel Zeit ihm für
+ seine Schüsse noch bleibt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ziel ist, dass der Schütze sich durch das Training mit dem Programm an die
+ Wettkampfsituation gewöhnt, dass er lernt, selbst zu entscheiden, wie viele
+ Ringe er beim nächsten Schuss zu treffen versucht, sowie, dass der Schütze
+ ein gutes Zeitgefühl entwickelt, sodass diese Dinge im echten Wettkampf
+ ohne das Programm automatisiert ablaufen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dafür muss das Programm natürlich mit den Wettbewerbsformalismen, zum Beispiel
+ den festen Zuordnungen des Zeitlimits zur Schusszahl oder der Zuordnung
+ der Waffe zur Zielscheibe, kompatibel sein.
+ Dabei muss natürlich jede beliebige Schuss- und Zielringzahl und möglichts
+ jede Waffe unterstützt werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zur Unterstützung des Trainers des Schützen soll zudem ein detailliertes
+ Schussprotokoll generiert werden, welches ihm ermöglicht, Schwachstellen
+ gemeinsam mit dem Schützen zu finden und an ihrer Beseitigung zu arbeiten
+ und aktuelle mit älteren Trainingsverläufen vergleichen zu können.
+\end_layout
+
+\begin_layout Subsection
+aktueller technischer Stand dieser Problematik
+\end_layout
+
+\begin_layout Standard
+Nach dem Wissen des befragten Experten Herrn Kunze existiert ein solches
+ Trainingsprogramm für Sportschützen nicht.
+ Die einzige Hilfe beim Training für Schütze und Trainer ist ein Programm,
+ welches von einer elektronischen Zielscheibe aus jeweils die aktuelle Ringzahl
+ ausliest.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Markt für ein solches Programm ist sehr klein und sehr spezialisiert,
+ sodass es für einen großen Software- Entwickler nicht wirtschaftlich sinnvoll
+ währe, ein entsprechendes Programm zu entwickeln.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+Dokumentation der Entwicklung des Programms
+\end_layout
+
+\begin_layout Subsection
+JavaFX als die genutzte Programmiersprache
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename javafx-logo.png
+	width 3.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Das Logo von JavaFX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://code.makery.ch/assets/library/javafx-2-tutorial/javafx-logo.png
+\end_layout
+
+\end_inset
+
+ : 08.12.15, JavaFX-Logo als PNG-Bild
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+JavaFX ist eine Spezifikation der Programmiersprache Java.
+ Sie ist in der aktuellen Version besonders auf grafische Oberflächen ausgelegt,
+ die mit mehr Designmöglichkeiten kompatibel sind als in früheren Spezifikatione
+n von Java (Swing, AWT).
+ JavaFX wird in der aktuellen Version 2.x hauptsächlich für anspruchsvolle
+ grafische Oberflächen wie zum Beispiel bei Videospielen verwendet.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der wichtigste Unterschied zu anderen JavaFX-Spezifikationen besteht darin,
+ dass die grafische Oberfläche an sich, die Zuordnung des auszuführenden
+ Codes, der von dieser aus aufgerufen wird, sowie die Hauptklasse des Programms
+ bei der genutzten Art der JavaFX-Programmierung in drei verschiedenen Dateien
+ getrennt sind.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dabei wird die grafische Oberfläche (GUI) an sich in Form einer FXML-Datei
+ gespeichert.
+ Diese enthält das Aussehen der Oberfläche mit ihren Buttons, Textfeldern
+ usw.
+ in Form von Code in einer XML-Sprache sowie die Zuordnungen von Events
+ der Oberfläche zu Methoden, die dabei auszuführen sind, zum Beispiel also
+ die Anweisung, beim Klicken auf den Start-Button die Start-Prozedur auszuführen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Diese Methoden, die von der GUI aus aufgerufen werden, sind im sogenannten
+ Controller gespeichert.
+ Er ist in Standard-Java geschrieben und hat Zugriff auf alle Java- und
+ JavaFX-Klassen.
+ Er stellt letztlich das Programm an sich dar.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die dritte Datei enthält die Hauptklasse, ihre einzige Funktion ist es,
+ die grafische Oberfläche zu laden und sie mit dem Controller zu verknüpfen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Java FX wurde aus folgenden Gründen als Programmiersprache für dieses Projekt
+ genutzt:
+\end_layout
+
+\begin_layout Itemize
+JavaFX hat ein moderneres Aussehen als die älteren Spezifikationen AWT und
+ Swing.
+\end_layout
+
+\begin_layout Itemize
+JavaFX ist als modernste Java-Spezifikation zukunftssicher.
+\end_layout
+
+\begin_layout Itemize
+JavaFX ist hervorragend in die benutzte Entwicklungsumgebung NetBeans IDE
+ 8.0.2 integriert, was die Entwicklung erleichtert.
+\end_layout
+
+\begin_layout Standard
+Zudem hat die Verwendung einer Java-Spezifikation noch einige allgemeine
+ Vorteile:
+\end_layout
+
+\begin_layout Itemize
+Java ist auf möglichst einfache Entwicklung von Programmen ausgelegt.
+\end_layout
+
+\begin_layout Itemize
+Java selbst bringt sehr viele Klassen und ihre Methoden mit, die oft die
+ Entwicklung beschleunigen.
+\end_layout
+
+\begin_layout Itemize
+Java wird in einem Interpreter auf fast jedem Betriebssystem ausgeführt,
+ d.h.
+ ein Java-Programm läuft auf Windows, Linux, Solaris...
+ überall gleich und muss für alle Systeme nur einmal entwickelt werden.
+\end_layout
+
+\begin_layout Itemize
+Java kann auf Milliarden von Geräten bereits ausgeführt werden und ist kostenlos
+ und leicht zu installieren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dokumentation des Hauptalgorithmus': Berechnung der Schussempfehlungen
+\end_layout
+
+\begin_layout Standard
+Im Folgenden wird der Hauptalgorithmus des Programms in Struktogrammen dargestel
+lt und schrittweise erklärt.
+ Verschiedene Arten des auszuführenden Codes wurden farblich hervorgehoben:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{lachsrot}{Lachsrot}
+\end_layout
+
+\end_inset
+
+ markiert sind für den Programmablauf nötige Festlegungen, zum Beispiel
+ Variableninitialisierungen.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{grellgelb}{Gelb}
+\end_layout
+
+\end_inset
+
+ markiert sind Ausgaben des Algorithmus'.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{hellgrün}{Hellgrün}
+\end_layout
+
+\end_inset
+
+ markiert sind die Teile des Hauptalgorithmus', die ausgeführt werden, wenn
+ weniger Ringe als im Durchschnitt nötig geschossen wurden.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{türkis}{Türkisblau}
+\end_layout
+
+\end_inset
+
+ markiert sind die Teile des Hauptalgorithmus', die ausgeführt werden, wenn
+ mehr Ringe als im Durchschnitt nötig geschossen wurden.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{pink}{Pink}
+\end_layout
+
+\end_inset
+
+ markiert sind die Teile des Hauptalgorithmus', die standardmäßig ausgeführt
+ werden müssen.
+\end_layout
+
+\begin_layout Subsubsection
+Grundidee hinter dem Algorithmus
+\end_layout
+
+\begin_layout Standard
+Um n Ringe bei m Schüssen zu erzielen, ist der nötige Durchschnittswert
+ (im Algorithmus 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ genannt) immer 
+\begin_inset Formula $\left\lceil \frac{n}{m}\right\rceil $
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Dieser Quotient muss immer aufgerundet werden, um niemals Empfehlungen zu
+ geben, die zu einer zu geringen Ringzahl führen.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Also ist die grundlegende Idee, die der Algorithmus verfolgt, den Schützen
+ im Durchschnitt zu diesem Wert zu führen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zuerst wird (vor Aufruf des Algorithmus') dem Schützen also empfohlen, im
+ Durchschnitt diesen Wert zu schießen.
+ Die aktuelle Empfehlung ist also optimum.
+ Wird nun ein Schussresultat eingegeben, gibt es drei Möglichkeiten:
+\end_layout
+
+\begin_layout Enumerate
+Der Schuss entspricht dem aktuell anvisierten Durchschnittswert.
+\end_layout
+
+\begin_layout Enumerate
+Der Schuss entspricht einer höheren...
+\end_layout
+
+\begin_layout Enumerate
+...
+ oder einer niedrigeren Ringzahl.
+\end_layout
+
+\begin_layout Standard
+Im Fall 1 gibt das Programm weiter die aktuelle Empfehlung aus.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In den Fällen 2 und 3 muss die aktuelle Empfehlung angepasst werden.
+ Wie genau das geschieht, zeigen die 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{hellgrün}{Hellgrün}
+\end_layout
+
+\end_inset
+
+ und die 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{türkis}{Türkisblau}
+\end_layout
+
+\end_inset
+
+ markierten Teile der Struktogramme, die Grundidee ist folgende:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Summe zweier Aufeinanderfolgender Schussergebnisse muss doppelt so groß
+ sein wie optimum, um einen Durchschnitt von optimum zu erreichen.
+ Also wird die Abweichung vom aktuellen Schuss zum Optimum ermittelt, die
+ Empfehlung für den nächsten Schuss ist dann optimum plus oder minus diese
+ Abweichung.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Im Fall, dass Optimum plus oder minus diese Abweichung aus dem bei einem
+ Schuss möglichen Bereich zwischen 10 und 0 Ringen gerät, muss optimum neu
+ berechnet und als aktuelle Empfehlung ausgegeben werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zusätzlich gibt der Algorithmus bei jedem Schuss noch zur Orientierung den
+ letzten Schuss und die minimal zu schießende Ringzahl 
+\begin_inset Formula $verbleibendeRinge-(verbleibendeSchuesse-1)*10$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Herleitung dieser Formel siehe Einleitung.
+\end_layout
+
+\end_inset
+
+ (wenn diese nicht 0 ist) aus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Teil 1 des Algorithmus: Variableninitailisierungen und nötige Festlegungen
+\end_layout
+
+\begin_layout Standard
+\noindent
+Anmerkung: eine Übersicht über alle Variablen in der Reihenfolge ihres Auftreten
+s sowie deren Funktion befindet sich im Anhang.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HA_1.jpg
+	height 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Teil 1 des Hauptalgorithmus als Structogramm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Hauptalgorithmus wird bei jedem Schuss mit dessen aktuellen Wert neu
+ aufgerufen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Array von 11 Integer-Zahlen (Ganzzahlen von 0 bis 10) 
+\begin_inset Quotes gld
+\end_inset
+
+zahlen
+\begin_inset Quotes grd
+\end_inset
+
+ speichert alle Empfehlungen, wobei der jeweilige Index die Schussempfehlung
+ und der Wert im Array dessen Anzahl ist.
+ Wenn also 
+\begin_inset Formula $zahl[5]=2$
+\end_inset
+
+ empfiehlt das Programm, mit den restlichen Schüssen zweimal 5 Ringe zu
+ treffen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim ersten Aufruf des Algorithmus' in der aktuellen Schussserie muss das
+ Array so initialisiert werden, dass es empfiehlt, bei jedem Schuss den
+ Optimalwert zu schießen.
+ Also wird 
+\begin_inset Formula $zahl[optimum]=schuesse$
+\end_inset
+
+ gesetzt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Wahrheitswert 
+\begin_inset Quotes gld
+\end_inset
+
+frischgenullt
+\begin_inset Quotes grd
+\end_inset
+
+ muss auf falsch gesetzt werden, weil das Optimum in diesem Durchlauf nicht
+ neu berechnet wurde.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Wahrheitswert 
+\begin_inset Quotes gld
+\end_inset
+
+falscheingabe
+\begin_inset Quotes grd
+\end_inset
+
+ ist algorithmisch nicht bedeutend, hier aber erwähnt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Bei jedem Schuss muss der Gesamtringzahl 
+\begin_inset Quotes gld
+\end_inset
+
+gesamt
+\begin_inset Quotes grd
+\end_inset
+
+ noch der Wert des aktuellen Schusses hinzuaddiert werden.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+gesamt
+\begin_inset Quotes grd
+\end_inset
+
+ wird vor jeder Schusserie auf 0 gesetzt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Quotes gld
+\end_inset
+
+letzter
+\begin_inset Quotes grd
+\end_inset
+
+ wird bei jedem Durchlauf auf den Wert des zuletzt eingegebenen Schusses,
+ 
+\begin_inset Quotes gld
+\end_inset
+
+aktuell
+\begin_inset Quotes grd
+\end_inset
+
+, gesetzt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Array von Integer-Zahlen 
+\begin_inset Quotes gld
+\end_inset
+
+ergebnisse
+\begin_inset Quotes grd
+\end_inset
+
+ speichert die einzelnen Schussergebnisse, um später statistische Erweiterungen
+ wie z.B.
+ eine Trendanalyse hinzufügen zu können.
+ Jeder neu eingegebene Schuss wird dazu in der Integer-Zahl mit dem Index
+ seiner Nummer minus 1 gespeichert (Java-Indizes zählen von 0 bis Anzahl-1).
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Algorithmus wird nur ausgeführt, wenn man seine Zielringzahl noch nicht
+ erreicht hat, also wird dies vor jedem Durchlauf erst einmal geprüft.
+\end_layout
+
+\begin_layout Subsubsection
+Die grundlegende Arbeitsweise des Algorithmus
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HA_2.jpg
+	height 22cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Teil 2 des Hauptalgorithmus' als Structogramm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+Bei jedem Schuss werden dem Schützen zur besseren Orientierung zu seinem
+ Ziel hin seine Gesamtringzahl und sein letzter Schuss ausgegeben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Für alle Empfehlungsberechnungen gilt: Diese werden nur ausgeführt, wenn
+ das Ziel nicht mehr zu erreichen ist oder bereits erreicht wurde (Wahrheitswert
+ 
+\begin_inset Quotes gld
+\end_inset
+
+nichtmehrzuerreichen
+\begin_inset Quotes grd
+\end_inset
+
+), was nur Programmabstürze oder unausführbare Empfehlungen (z.B.
+ 12 RInge zu schießen) zur Folge hätte, und es sich nicht um den letzten
+ Schuss handelt, wo Empfehlungen nicht mehr sinnvoll wären.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Wird dies erfüllt, wird der Wahrheitswert 
+\begin_inset Quotes gld
+\end_inset
+
+nurabgearbeitet
+\begin_inset Quotes grd
+\end_inset
+
+, welcher beschreibt, dass eine empfohlene Ringzahl geschossen wurde, auf
+ 
+\begin_inset Quotes gld
+\end_inset
+
+falsch
+\begin_inset Quotes grd
+\end_inset
+
+ gesetzt, da dies später noch überprüft werden muss.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Danach wird geprüft, ob weniger Ringe geschossen wurden, als 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ vorgibt.
+ Nehmen wir an, dies sei gegeben, wird das Kernstück des Hauptalgorithmus
+ ausgeführt:
+\end_layout
+
+\begin_layout Enumerate
+Die Variable 
+\begin_inset Quotes gld
+\end_inset
+
+Guthaben
+\begin_inset Quotes grd
+\end_inset
+
+ speichert die Differenz der Ringe, die man erhält, wenn man den vorgeschlagenen
+ Durchschnitt erreicht, und der Zielringzahl.
+ Ist 
+\begin_inset Quotes gld
+\end_inset
+
+Guthaben
+\begin_inset Quotes grd
+\end_inset
+
+ größer oder gleich der aktuellen Abweichung, wird 
+\begin_inset Quotes gld
+\end_inset
+
+Guthaben
+\begin_inset Quotes grd
+\end_inset
+
+ um diese verringert.
+ Damit wird realisiert, dass die Abweichung ausgeglichen und der Schuss
+ wie ein Schuss, der 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ Ringe getroffen hat, behandelt wird.
+\end_layout
+
+\begin_layout Enumerate
+Ist Guthaben kleiner als die Abweichung von Optimum, dann wird geprüft,
+ ob die aktuelle Ringzahl empfohlen war.
+ Falls ja, wird die Integer-Zahl mit dem Index der aktuellen Ringzahl im
+ Array zahl um 1 erniedrigt und im Wahrheitswert 
+\begin_inset Quotes gld
+\end_inset
+
+nurabgearbeitet
+\begin_inset Quotes grd
+\end_inset
+
+ gespeichert, dass eine Empfehlung befolgt wurde.
+\end_layout
+
+\begin_layout Enumerate
+Falls nein, wird geprüft, ob noch empfohlen wird, 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ Ringe zu prüfen.
+ Ist dies gegeben, wird zahl[optimum] um 1 erniedrigt, da 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ in der im Folgenden generierten Empfehlung enthalten ist.
+\end_layout
+
+\begin_layout Enumerate
+Danach wird die Abweichung des aktuellen Wertes von 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ ermittelt und geprüft, ob 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ plus diese Empfehlung im Bereich zwischen 0 und 10 Ringen liegt.
+ Falls ja, wird empfohlen, 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ plus diese Abweichung Ringe zu schießen, damit die Summe des aktuellen
+ und des nächsten Schusses zweimal 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ beträgt.
+\end_layout
+
+\begin_layout Enumerate
+Fällt die zum Ausgleich nötige Zahl aus diesem Intervall, muss 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ neu berechnet werden.
+ Dafür werden alle Empfehlungen auf 0 gesetzt und und 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ als Quotient der noch zu erreichenden Ringzahl und der verbleibenden Schusszahl
+ neu berechnet.
+ Dabei muss 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ aufgerundet werden, um nicht zu zu wenigen Ringen als Endergebnis zu führen.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes gld
+\end_inset
+
+Guthaben
+\begin_inset Quotes grd
+\end_inset
+
+ wird als Differenz 
+\begin_inset Formula $übrigeSchüsse*optimum+gesamt-ziel$
+\end_inset
+
+ neu berechnet.
+\end_layout
+
+\begin_layout Enumerate
+Im Wahrheitswert 
+\begin_inset Quotes gld
+\end_inset
+
+frischgenullt
+\begin_inset Quotes grd
+\end_inset
+
+ wird gespeichert, dass gerade ein neues 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ berechnet wurde.
+\end_layout
+
+\begin_layout Enumerate
+Zuletzt wird geprüft, ob 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ größer als 10 ist.
+ Falls ja, wird im Wahrheitswert 
+\begin_inset Quotes gld
+\end_inset
+
+nichtmehrzuerreichen
+\begin_inset Quotes grd
+\end_inset
+
+ gespeichert, dass man die Zielringzahl nicht mehr erreichen kann, sonst
+ wird im Array 
+\begin_inset Quotes gld
+\end_inset
+
+zahl
+\begin_inset Quotes grd
+\end_inset
+
+ die Empfehlung gespeichert, bei jedem übrigen Schuss 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ Ringe zu schießen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Im Fall, dass mehr Ringe als 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ geschossen wurden, ist das Vorgehen nahezu identisch.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zuletzt wird noch geprüft, ob die Anzahl der Empfehlung, 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ zu schießen (zahl[optimum]) größer 0, 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ nicht neu berechnet und nicht nur die Ringzahl einer Empfehlung geschossen
+ wurde.
+ Ist dies gegeben, wird zahl[optimum] noch um 1 verringert, da entweder
+ 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ Ringe geschossen wurden oder 
+\begin_inset Quotes gld
+\end_inset
+
+optimum
+\begin_inset Quotes grd
+\end_inset
+
+ in der generierten Empfehlung enthalten ist.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Die Generierung der Empfehlungsausgabe
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HA_3.jpg
+	width 16cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Teil 3 des Hauptalgorithmus' als Structogramm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Wurde gerade der vorletzte Schuss eingegeben, wird als Empfehlung die Differenz
+ zwischen 
+\begin_inset Quotes gld
+\end_inset
+
+gesamt
+\begin_inset Quotes grd
+\end_inset
+
+ und der Zielringzahl 
+\begin_inset Quotes gld
+\end_inset
+
+ziel
+\begin_inset Quotes grd
+\end_inset
+
+ ausgegeben, also die Zahl der noch zu schießenden Ringe.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sonst wird geprüft, ob nicht gerade der letzte Schuss eingegeben wurde,
+ wo eine Schussempfehlung keinen Sinn hätte.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Falls ja, wird die Empfehlung für den nächsten Schuss generiert:
+\end_layout
+
+\begin_layout Enumerate
+Zuerst erfolgt die Ausgabe der Information, dass jetzt die Schussempfehlung
+ kommt.
+\end_layout
+
+\begin_layout Enumerate
+Dann wird das Minimum
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+siehe Abschnitt 2.2.1
+\end_layout
+
+\end_inset
+
+ berechnet und, wenn es größer als 0 ist, ausgegeben.
+\end_layout
+
+\begin_layout Enumerate
+Danach wird (um den Schützen emotional zu entlasten) die kleinste Empfehlung
+ gesucht und ausgegeben, wenn sie nicht dem Minimum entspricht.
+\end_layout
+
+\begin_layout Standard
+Zuletzt wird die Zahl der Durchläufe durch den Hauptalgorithmus 
+\begin_inset Quotes gld
+\end_inset
+
+i
+\begin_inset Quotes grd
+\end_inset
+
+ erhöht.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Umsetzung in JavaFX
+\end_layout
+
+\begin_layout Subsubsection
+prinzipielle Umsetzung der grafischen Benutzeroberfläche (GUI) und der Ein-
+ und Ausgabe
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GUI.PNG
+	width 17cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Die GUI des Programms 
+\begin_inset Quotes gld
+\end_inset
+
+Chancenrechner
+\begin_inset Quotes grd
+\end_inset
+
+ unter Windows 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Benutzeroberfläche ist grundlegend in zwei Bereiche aufgeteilt: die
+ Zielscheibe zur Eingabe der einzelnen Schüsse und Ausgabe des Protokolls
+ links und das Ein/Ausgabesegment rechts.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dieses enthält zwei Textfelder, in die Schusszahl und Zielringzahl eingegeben
+ werden.
+ Darunter kann mit zwei RadioButtons die anzuzeigende Zielscheibe ausgewählt
+ werden, aktuell werden 
+\begin_inset Quotes gld
+\end_inset
+
+Luftpistole 10m
+\begin_inset Quotes grd
+\end_inset
+
+ und 
+\begin_inset Quotes gld
+\end_inset
+
+Luftgewehr 10m
+\begin_inset Quotes grd
+\end_inset
+
+ unterstützt.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zudem gibt es weiter unten eine Textausgabefläche, in welche die Schussempfehlun
+gen ausgegeben werden.
+ Ganz unten ist der Timer integriert.
+ Es handelt sich hierbei um ein Textfeld mit großer Schriftgröße, um immer
+ gut lesbar zu sein.
+ Solange noch Zeit übrig ist, wird diese in grüner Schriftfarbe dargestellt,
+ ist sie abgelaufen, steht im Timer in roter Schrift 
+\begin_inset Quotes gld
+\end_inset
+
+Zeit abgelaufen!
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zuletzt gibt es etwa auf mittlerer Höhe im rechten Segment noch einen Mehrfunkti
+onsbutton.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zu Programmstart und immer nach Abschluss einer Serie zeigt er 
+\begin_inset Quotes gld
+\end_inset
+
+Initialisieren
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Klickt man ihn an, wird man aufgefordert, seinen Namen für das Protokoll
+ einzugeben, die Parameter für Schuss- und Zielringzahl werden auf eingabefehler
+ geprüft und ggf.
+ ein Dialog zur Korrektur dieser angezeigt.
+ Des Weiteren werden alle Markierungen auf der Zielscheibe gelöscht, die
+ Empfehlung ausgegeben, möglichst bei jedem Schuss den insgesamt nötigen
+ Durchschnitt zu schießen und der Timer auf die insgesamt für diese Schusserie
+ vorgegebene oder berechnete Zeit eingestellt.
+ Zum Schluss ändert der Button seinen Titel in 
+\begin_inset Quotes gld
+\end_inset
+
+Start
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zeigt der Button 
+\begin_inset Quotes gld
+\end_inset
+
+Start
+\begin_inset Quotes grd
+\end_inset
+
+, startet er beim Klick auf ihn den Timer, ermöglicht es, auf der Zielscheibe
+ Schüsse einzugeben und verhindert das Wechseln der Zielscheibe.
+ Sein Titel wird auf 
+\begin_inset Quotes gld
+\end_inset
+
+Stopp
+\begin_inset Quotes grd
+\end_inset
+
+ gesetzt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zeigt der Button 
+\begin_inset Quotes gld
+\end_inset
+
+Stopp
+\begin_inset Quotes grd
+\end_inset
+
+, bricht er bei einem Klick die aktuelle Schusserie ab, stoppt den Timer,
+ ermöglicht das Wechseln der Zielscheibe und ändert seinen Titel in 
+\begin_inset Quotes gld
+\end_inset
+
+Initialisieren
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Läuft das Programm, kann durch Klick auf die Zielscheibe an der Stelle des
+ Treffers dessen Schusswert eingegeben werden; das Programm bietet die Möglichke
+it, bei Fehlern diesen manuell zu korrigieren.
+ Ein Klick startet jeweils die Empfehlungsberechnung für den nächsten Schuss.
+ Nach der erfolgreichen Eingabe bleibt eine Markierung mit Ort des Schusses
+ und dessen Nummer zurück.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Nach Abschluss der Serie wird auf die Zielscheibe Name und Uhrzeit sowie
+ die Auswertung mit Schusszahl, Ziel, erreichten Ringen, Erreichen der Vorgabe
+ und Zeitbedarf geschrieben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Zielscheibe mit Schüssen und Bewertung wird am Ende als PNG-Bild auf
+ dem Desktop gespeichert, dazu ein schriftliches Protokoll mit Empfehlungen
+ des Programms.
+ Zudem wird alle 10 Schuss die Scheibe gespeichert und geleert, um sie nicht
+ zu sehr zu füllen (Übersichtlichkeit).
+ Eine mögliche Erweiterung wäre es, Bild- und Textprotokoll zusammen als
+ PDF zu speichern.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die technische Umsetzung der GUI erfolgt mittels einer auf FXML basierenden
+ JavaFX-GUI, auf einem Pane
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ein Oberflächenelement, auf dem andere Elemente angeheftet werden können.
+\end_layout
+
+\end_inset
+
+ liegt ein ImageView
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ein Oberflächenelement, welches Bilder anzeigen kann.
+\end_layout
+
+\end_inset
+
+, darauf wird ein Canvas
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes gld
+\end_inset
+
+Canvas
+\begin_inset Quotes grd
+\end_inset
+
+ (engl.) : 
+\begin_inset Quotes gld
+\end_inset
+
+Leinwand
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ angeheftet (als Zeichenfläche für die Kreise um die eingegebenen Schüsse),
+ an das Pane ist ein MouseListener
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ein Objakt, das bei einem Klick auf das Oberflächenelement, an das es angeheftet
+ ist, eine Aktion ausführt.
+\end_layout
+
+\end_inset
+
+ angeheftet.
+\end_layout
+
+\begin_layout Subsubsection
+Umsetzung wichtiger Algorithmen
+\end_layout
+
+\begin_layout Paragraph*
+Umsetzung der Eingabe eines Schusswertes
+\end_layout
+
+\begin_layout Standard
+Das Bild der Zielscheibe liegt als PNG vor und ist wie unter 2.3.1 beschrieben
+ in die GUI integriert.
+ Der Algorithmus zur Ermittlung des Schusswertes wird bei einem Klick auf
+ dieses Bild gestartet, wenn eine Serie läuft.
+ Dabei liefert der angeheftete MouseListener die Koordinaten des Klicks.
+ Die Koordinaten der Mitte der Zielscheibe sind bekannt.
+ Somit kann der Abstand a eines Schusses von der Zielscheibenmitte ermittelt
+ werden durch: 
+\begin_inset Formula $\Delta x=\left|x1-x\right|$
+\end_inset
+
+ und 
+\begin_inset Formula $\text{\Delta}y=\left|y1-y\right|$
+\end_inset
+
+ durch 
+\begin_inset Formula $a=\sqrt{\left(\left(x1-x\right)^{2}+(y1-y)^{2}\right)}$
+\end_inset
+
+ nach Satz des Pythagoras.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Schussberechnung.png
+	height 3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Illustration der Herleitung der Berechnung des Abstandes eines Schusses
+ von der Mitte
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Durch den Vergleich von a mit den Abständen der jeweiligen Ringe von der
+ Mitte kann nun dem Schuss eine Ringzahl zugeordnet werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Diese Methode hat den Nachteil, dass die Eingabe besonders an den Rändern
+ der Ringe nicht 100% genau ist und die Zielscheibe immer in einer Auflösung
+ von 800 * 800 Bildpunkten dargestellt werden muss, da die gespeicherten
+ Abstände Absolutwerte sind.
+ Für den Fall, dass die Eingabe einmal nicht funktionieren sollte, schafft
+ die Möglichkeit, sie in einem JOptionPane zu korrigieren, Abhilfe.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Umsetzung der Protokollerstellung
+\end_layout
+
+\begin_layout Standard
+Für diese Methode wird zunächst eine neue Instanz der Klasse Calendar erstellt.
+ Diese Instanz enthält das aktuelle Datum und die aktuelle Uhrzeit.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Dateiname des Protokolls besteht aus dieser Uhrzeit, die in einem String
+ namens Protokoll hinter dem Wort 
+\begin_inset Quotes gld
+\end_inset
+
+Protokoll
+\begin_inset Quotes grd
+\end_inset
+
+ gespeichert wird.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die statistische Auswertung der aktuellen Schussserie wird nun mittels einer
+ Instanz der Klasse Graphics auf die Zielscheibe geschrieben.
+ Sie besteht aus Name und Uhrzeit sowie Schusszahl, Zielringzahl, erreichte
+ Ringe, Erreichen der Vorgabe und Zeitbedarf.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Pane 
+\begin_inset Quotes gld
+\end_inset
+
+flaeche
+\begin_inset Quotes grd
+\end_inset
+
+, auf dem das ImageView, welches die Zielscheibe enthält, sowie die Zeichenfläch
+e mit allen Markierungen und der Statistik, liegen, stellt die Methode 
+\begin_inset Quotes gld
+\end_inset
+
+snapshot
+\begin_inset Quotes grd
+\end_inset
+
+ bereit.
+ Diese liefert ein Bildschirmfoto der Zielscheibe mit den Markierungen und
+ der Statistik auf ihr.
+ Dieses Foto wird in einem WritableImage zwischengespeichert und mittels
+ ImageIO auf den Desktop geschrieben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Für das schriftliche Protokoll wurden alle Programmein- und Ausgaben mit
+ Ausnahme der Zeit im String 
+\begin_inset Quotes gld
+\end_inset
+
+Protokoll
+\begin_inset Quotes grd
+\end_inset
+
+ gespeichert.
+ Dieser wird nun nur noch in eine Textdatei mit dem selben Dateinamen ebenfalls
+ auf dem Desktop gespeichert.
+\end_layout
+
+\begin_layout Paragraph
+Umsetzen der Zeitfunktion
+\end_layout
+
+\begin_layout Standard
+Immer beim Initialisieren des Programms wird die Gesamtzeit ermittelt.
+ Es gibt hierbei feste Zuordnungen (z.B.
+ 10 Schuss zu 15 Minuten), standardmäßig rechnet das Programm mit einer
+ Minute für einen Schuss.
+ Diese Gesamtzeit wird einmal als 
+\begin_inset Quotes gld
+\end_inset
+
+gesamtzeit
+\begin_inset Quotes grd
+\end_inset
+
+ und einmal als 
+\begin_inset Quotes gld
+\end_inset
+
+zeit
+\begin_inset Quotes grd
+\end_inset
+
+ in einer Variable mit diesen Namen gespeichert.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In einer Instanz namens TimerTask der Klasse Runnable ist die Aktion gespeichert
+, die jede Sekunde ausgeführt werden soll: 
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Zuerst wird geprüft, ob 
+\begin_inset Quotes gld
+\end_inset
+
+zeit
+\begin_inset Quotes grd
+\end_inset
+
+ noch größer ist als 0.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Falls ja, wird 
+\begin_inset Quotes gld
+\end_inset
+
+zeit
+\begin_inset Quotes grd
+\end_inset
+
+ um 1 Sekunde gesenkt und in grüner Farbe im Textfeld 
+\begin_inset Quotes gld
+\end_inset
+
+Zeitanzeiger
+\begin_inset Quotes grd
+\end_inset
+
+ in Minuten und Sekunden getrennt ausgegeben.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Sonst wird im Textfeld in roter Farbe 
+\begin_inset Quotes gld
+\end_inset
+
+Zeit abgelaufen!
+\begin_inset Quotes grd
+\end_inset
+
+ angezeigt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Instanz der Klasse ScheduledExecutorService 
+\begin_inset Quotes gld
+\end_inset
+
+exec
+\begin_inset Quotes grd
+\end_inset
+
+ führt TimerTask jede Sekunde aus.
+ Diese Ausführung ist ScheduledFuture<?> 
+\begin_inset Quotes gld
+\end_inset
+
+result
+\begin_inset Quotes grd
+\end_inset
+
+ zugewiesen.
+ Die Ausführung von TimerTask würde endlos laufen, auch wenn die aktuelle
+ Serie schon vorbei ist, aber 
+\begin_inset Quotes gld
+\end_inset
+
+result
+\begin_inset Quotes grd
+\end_inset
+
+ kann die Ausführung beenden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Beschreibung des Arbeitsprozesses und der Programmentwicklung
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dieses Projekt wurde in regelmäßigen Treffen mit einem Trainer eines Vereins
+ jugendlicher Sportschützen und einem Informatiklehrer erarbeitet.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Vor den Sommerferien 2015 wurde beim ersten Treffen eine grundlegende Konzeption
+ des Programms ausgearbeitet.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Während der Sommerferien wurde ein erster Prototyp des Algorithmus entwickelt.
+ Es handelte sich anfangs noch um ein in der Programmiersprache C++ geschriebene
+s Programm, welches ohne GUI in einem DOS-Fenster lief.
+ Diese ursprüngliche Version ermittelte Empfehlungen nach der jeweiligen
+ Abweichung vom Optimum (x Ringe zu wenig getroffen bedeutet Optimum + x
+ Ringe schießen usw.), wenn zum die zum Ausgleich nötige Zahl kleiner 0 oder
+ größer 10war, dann wurde diese Zahl reduziert und die Anzahl der Schüsse
+ auf diese Zahl erhöht, was zur Folge hatte, dass das Programm viel zu viel
+ vom Schützen erwartete.
+ Zudem wurde das gesamte Arrays mit den Empfehlungen ausgegeben statt einer
+ einzelnen Empfehlung und die Ausgabe des Minimalwertes fehlte.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In den ersten Schulwochen des Schuljahres 2015/2016 wurden viele kleine
+ Fehler am Hauptalgorithmus behoben und die Neuberechnung des Optimalwertes
+ eingebaut.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim zweiten Treffen wurde der Prototyp dem Trainer zum Testen übergeben
+ sowie einige Details verbessert.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim dritten Treffen wurden Verbesserungen an der Ausgabe besprochen
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Siehe die angehängten Protokolle vor und nach diesem Treffen
+\end_layout
+
+\end_inset
+
+ und der Algorithmus so erweitert, dass er bis zum Ende der Schussserie
+ durchläuft, auch wenn das Ringziel nicht mehr erreichbar ist, statt dann
+ abzubrechen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Danach wurde die Ausgabe des Minimalwertes hinzugefügt und die Empfehlungsausgab
+e so geändert, dass immer nur eine Empfehlung ausgegeben wird.
+ Außerdem wurde noch ein Prototyp eines JavaFX-Programms mit GUI entwickelt,
+ der jedoch nur Ein- und Ausgabe beherrschte.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim vierten Treffen wurden beide Prototypen übergeben sowie an beiden einige
+ Details verbessert, besonders die Hinzufügung der Zeitbetrachtung.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Danach wurde der Hauptalgorithmus in den Prototypen mit GUI implementiert
+ und die GUI so fertiggestellt, dass sie alle Funktionen hatte, die sie
+ auch jetzt noch hat.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim fünften Treffen erfolgten Detailverbesserungen an der GUI und dem Algorithm
+us, besonders, dass alle 10 Schuss die Scheibe geleert wird.
+ Danach wurde die Funktion ergänzt, dass alle 10 Schuss die Scheibe zusätzlich
+ zum Leeren noch als Bild gespeichert wird.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim sechsten Treffen erfolgten noch Detailverbesserungen an der Zeitfunktion
+ und der Oberfläche allgemein.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Während der gesamten Arbeitszeit wurden permanent Fehler im Programm gesucht
+ und ausgebessert, wobei auch die Testprotokolle herangezogen wurden.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bewertung des fertigen Programms
+\end_layout
+
+\begin_layout Subsection
+Auswertung der Tests
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programm läuft nach bisherigem Erkenntnisstand stabil, keine Abstürze
+ aufgrund von Fehlern sind bekannt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ein Problem, welches bei einem leistungsmäßig eher schwachen Laptot auftrat:
+ Bei der Korrektur eines Eingabefehlers kam es zu einem Absturz des Programms,
+ wenn man das JOptionPane zu lange angezeigt ließ.
+ Dieses Problem konnte bisher nicht gelöst werden, tritt aber bei mittelmäßig
+ leistungsstarken PC's nicht auf, weshalb man es ignorieren kann.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Alle bekannten Programmfehler wurden behoben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In einer frühen Version des C++- Programms zum Beispiel trat der Fehler
+ auf, dass durch einen Umwandlungsfehler von Ganz- in Gleitkommazahlen die
+ Berechnung des Minimums versagte.
+ Dieser Fehler konnte behoben werden.
+ Auch der Hauptalgorithmus selbst neigte am Anfang zu Fehlern, die jedoch
+ behoben wurden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ein großer Vorteil von Java kommt hier zu tragen: im Gegensatz zu anderen
+ Sprachen wie C++, deren Programme bei Programmfehlern abstürzen, wirft
+ Java eine Exception und setzt die Ausführung des Programms fort.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Teilweise kommt es zu Verzögerungen beim Protokollieren, da die relativ
+ großen Datenmengen der Bildprotokolle erst geschrieben werden müssen; eine
+ denkbare Lösung wäre nur Multithreading (hier kaum sinnvoll) oder eine
+ schnellere Festplatte; diese Verzögerungen liegen aber lediglich im Bereich
+ der 1-2 Sekunden, sind also gerade so spürbar und kein echtes Problem.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Sportschützen, die dieses Programm getestet haben, und deren Trainer
+ mögen es und bezeichnen es als echte Hilfe beim Training.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Vergleich des fertigen Programms mit seinen Zielen
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programm gibt einem Schützen (lt.
+ Hr.
+ Kunze) sinnvolle und hilfreiche Informationen und hilft ihm, über die aktuelle
+ Serie den Überblick zu bewahren und die aktuelle Leistung einzuschätzen
+ (letzter Schuss, der allgemeine Schusstrend mit den Markierungen der Schüsse
+ auf der Scheibe…).
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Besonders die Timerfunktion des Programms wird als echte Hilfe gesehen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programm ist aktuell nutzbar für das Training mit Luftgewehr und Pistole
+ auf 10 m Entfernung durch die eingebauten sportordnungsgerechten Scheiben,
+ andere Scheiben können jedoch leicht eingebaut werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Jede mögliche Kombination von Schüssen und Zielringzahl kann simuliert werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Zeitvorgaben im Programm und die angezeigten Zielscheiben basieren auf
+ der deutschen Sportordnung.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Protokolle sind für den Trainer interessant, besonders der Durchschnitt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Protokolle können archiviert und später erneut zur Auswertung des Trainingse
+rfolges der Schützen herangezogen werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Ein-und Ausgabe ist relativ genau, die Bedienung einfach und eingabefehlerre
+sistent gelungen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dieses Projekt kann noch erweitert werden.
+ Denkbar ist zum Beispiel eine Vertiefung der Statistikfunktionen.
+ Da heute fast jeder ein Smartphone hat, ist auch die Ergänzung des Programms
+ durch eine App für den Schützen im Gespräch, die ihm noch einmal die Empfehlung
+en anzeigt und sich mit dem PC-Programm des Trainers synchronisiert.
+ Zuletzt ist noch geplant, den reinen Hauptalgorithmus in ein Programm zu
+ importieren, welches an eine elektronische Schießscheibe angeschlossen
+ ist und von dieser die aktuellen Schusswerte bekommt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Alles in Allem kann man sagen, das Programm hat seine Ziele voll erfüllt
+ und ist eine echte Hilfe für angehende Sportschützen geworden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Literaturverzeichnis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+Bildquellen
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://pixabay.com/static/uploads/photo/2012/04/24/16/43/targets-40383_640.png
+\end_layout
+
+\end_inset
+
+ : 01.01.2016 14:10, Bild der Zielscheibe Luftgewehr 10 m im Programm
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.schuetzenbedarf-baur.com/images/Krueger%20Pistole%2025-50%20m%20C50%203
+101_100.jpg
+\end_layout
+
+\end_inset
+
+ : 01.01.2016 14:11, Bild der Zielscheibe Luftpistole 10 m im Programm
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://code.makery.ch/assets/library/javafx-2-tutorial/javafx-logo.png
+\end_layout
+
+\end_inset
+
+ : 08.12.15, JavaFX-Logo als PNG-Bild
+\end_layout
+
+\begin_layout Itemize
+andere Bilder in der Projektarbeit: selbst erstellt
+\end_layout
+
+\begin_layout Paragraph
+Hilfe bei der Programmentwicklung
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://code.makery.ch/blog/javafx-2-snapshot-as-png-image/
+\end_layout
+
+\end_inset
+
+ : 01.01.2016 14:14, Marco Jacob, JavaFX 2 Snapshot as PNG Image
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/16128423/how-to-update-the-label-box-every-2-s
+econds-in-java-fx
+\end_layout
+
+\end_inset
+
+ : 01.01.2016 14:18, Stackoverflow.com, How to update the label box every 2
+ seconds in java fx?
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://tomasmikula.github.io/blog/2014/06/04/timers-in-javafx-and-reactfx.html
+\end_layout
+
+\end_inset
+
+ : 01.01.2016 14:19, Tomas Mikula, Timers in JavaFX and ReactFX
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/16764549/timers-and-javafx
+\end_layout
+
+\end_inset
+
+ : 01.01.2016 14:20, Stackoverflow.com, Timers and javafx
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://de.wikibooks.org/wiki/Java_Standard:_Datum
+\end_layout
+
+\end_inset
+
+ : 01.01.2016 14:21, de.wikibooks.org, Java Standard: Datum
+\end_layout
+
+\begin_layout Paragraph
+persönliche Unterstützung
+\end_layout
+
+\begin_layout Itemize
+Thiele, Otto, Informatiklehrer, Carl-Zeiss-Gymnasium, Jena, Art der Unterstützun
+g: Hilfe bei der Themenwahl und Konzeption des Programms, Unterstützung
+ bei der Umsetzung
+\end_layout
+
+\begin_layout Itemize
+Kunze, Bert, Trainer, Schützenverein am Bürgel eV, Jena, Art der Unterstützung:
+ Hilfe bei der Konzeption des Programms, Test der Programmprototypen im
+ Schützenverein
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Anhang
+\end_layout
+
+\begin_layout Subsection
+Übersicht über die Variablen im Hauptalgorithmus und ihre Funktionen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="8cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Variable 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Typ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Funktion
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+erstesmal 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert, ob gerade der erste Schuss der aktuellen Serie eingegeben wurde
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zahl 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Array von 11 int- Zahlen 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die Empfehlungen, die das Programm geben wird; dabei sind die
+ Indizes die Schusswerte von 0 bis 10 und deren Werte jeweils die Anzahl,
+ wie oft der Wert zu schießen ist 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+optimum 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert den nötigen Durchschnittswert, um die Zielringzahl zu erreichen;
+ immer aufgerundet bei der Berechnung, um nie zu wenig Ringe zu empfehlen
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+frischgenullt 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert, ob gerade optimum neu berechnet wurde 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gesamt 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die insgesamt geschossene Ringzahl 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aktuell 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert den aktuell eingegebenen Schuss 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ergebnisse 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Array von int-Zahlen; für jeden Schuss der Serie eine 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die einzelnen Ringzahlen der Schüsse 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+letzter 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die Ringzahl des letzten Schusses 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+echteschuesse 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nummer des aktuellen Schusses 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ziel 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die Zielringzahl 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nichtmehrzuerreichen 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert, ob die Zielringzahl nicht mehr zu erreichen ist oder bereits
+ erreicht wurde 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+i 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die Nummer des aktuellen Durchlaufs 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nurabgearbeitet 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert, ob eine Empfehlung eingehalten wurde 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Guthaben 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die Differenz zwischen der Zielringzahl und dem Wert, den man
+ erhält, wenn man die Empfehlungen befolgt 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zwischensumme 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mehrzweck-Variable: speichert die Zahl aller verbleibender Schüsse 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+j 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+speichert die aktuelle Empfehlung 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Übersicht über die Variablen im Hauptalgorithmus und ihre Funktionen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Testprotokolle
+\end_layout
+
+\begin_layout Subsubsection
+Testprotokoll vor dem dritten Treffen
+\end_layout
+
+\begin_layout Standard
+Programm Chancenrechner Version 0.4 ALPHA
+\end_layout
+
+\begin_layout Standard
+Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+\end_layout
+
+\begin_layout Standard
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+\end_layout
+
+\begin_layout Standard
+Schuetze: 10
+\end_layout
+
+\begin_layout Standard
+Schuesse: 5
+\end_layout
+
+\begin_layout Standard
+Zielpunkte: 32
+\end_layout
+
+\begin_layout Standard
+Empfehlungen werden gegeben zum Erreichen von 35 Punkten.
+\end_layout
+
+\begin_layout Standard
+Ihr Ziel: durschschnittlich 7 Punkte.
+\end_layout
+
+\begin_layout Standard
+Schuss 1: 7
+\end_layout
+
+\begin_layout Standard
+Ergebnisse der Schuesse: 7;
+\end_layout
+
+\begin_layout Standard
+Bisherige Gesamtpunktzahl: 7
+\end_layout
+
+\begin_layout Standard
+Sie muessen noch 4 mal 7 Treffer erzielen.
+\end_layout
+
+\begin_layout Standard
+Schuss 2: 7
+\end_layout
+
+\begin_layout Standard
+Ergebnisse der Schuesse: 7;7;
+\end_layout
+
+\begin_layout Standard
+Bisherige Gesamtpunktzahl: 14
+\end_layout
+
+\begin_layout Standard
+Sie muessen noch 3 mal 7 Treffer erzielen.
+\end_layout
+
+\begin_layout Standard
+Schuss 3: 7
+\end_layout
+
+\begin_layout Standard
+Ergebnisse der Schuesse: 7;7;7;
+\end_layout
+
+\begin_layout Standard
+Bisherige Gesamtpunktzahl: 21
+\end_layout
+
+\begin_layout Standard
+Sie muessen noch 2 mal 7 Treffer erzielen.
+\end_layout
+
+\begin_layout Standard
+Schuss 4: 7
+\end_layout
+
+\begin_layout Standard
+Ergebnisse der Schuesse: 7;7;7;7;
+\end_layout
+
+\begin_layout Standard
+Bisherige Gesamtpunktzahl: 28
+\end_layout
+
+\begin_layout Standard
+Sie muessen noch 4 Treffer erzielen.
+ Dies ist Ihr letzter Schuss.
+\end_layout
+
+\begin_layout Standard
+Schuss 5: 7
+\end_layout
+
+\begin_layout Standard
+Ergebnisse der Schuesse: 7;7;7;7;7;
+\end_layout
+
+\begin_layout Standard
+Mit 35 Punkten haben Sie Ihr Ziel von 32 Punkten erreicht.
+ Ihnen stehen noch 0 Schuesse zur Verfuegung.
+\end_layout
+
+\begin_layout Standard
+Sie haben 35 Punkte erzielt.
+\end_layout
+
+\begin_layout Standard
+Sie haben durchschnittlich 7 Treffer erzielt.
+\end_layout
+
+\begin_layout Standard
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Testprotokoll nach dem dritten Treffen
+\end_layout
+
+\begin_layout Standard
+Programm Chancenrechner Version 0.5 ALPHA
+\end_layout
+
+\begin_layout Standard
+Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+\end_layout
+
+\begin_layout Standard
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+\end_layout
+
+\begin_layout Standard
+Schuetze: Alex
+\end_layout
+
+\begin_layout Standard
+Serie: 10
+\end_layout
+
+\begin_layout Standard
+Ringe zu erreichen: 78
+\end_layout
+
+\begin_layout Standard
+Das Ziel: durschschnittlich 7.8 Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 1: 9
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 9;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss:
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 2: 10
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 19;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss:
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 3: 7
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 26;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss:
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 4: 8
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 34;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss:
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 5: 7
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 41;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss:
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 6: 7
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 48;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss:
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 7: 8
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 56;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss: mindestens 2 Ringe;
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 8: 8
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 64;
+\end_layout
+
+\begin_layout Standard
+Naechster Schuss: mindestens 4 Ringe;
+\end_layout
+
+\begin_layout Standard
+Empfehlung: 8 oder mehr Ringe.
+\end_layout
+
+\begin_layout Standard
+Schuss 9: 7
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 71;
+\end_layout
+
+\begin_layout Standard
+Sie muessen noch 7 Ringe erzielen.
+ Dies ist Ihr letzter Schuss.
+\end_layout
+
+\begin_layout Standard
+Schuss 10: 8
+\end_layout
+
+\begin_layout Standard
+Gesamtringzahl: 79;
+\end_layout
+
+\begin_layout Standard
+Sie haben 79 Ringe erzielt und dafuer 1 Minuten 25 Sekunden gebraucht.
+\end_layout
+
+\begin_layout Standard
+Sie haben durchschnittlich 7.9 Ringe erzielt.
+\end_layout
+
+\begin_layout Standard
+Herzlichen Glueckwunsch, Sie haben Ihre Zielringzahl erreicht.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

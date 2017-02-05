@@ -1,0 +1,28 @@
+Schuesse: 5
+Zielpunkte: 31
+Empfehlungen werden gegeben zum Erreichen von 35 Punkten.
+Ihr Ziel: durschschnittlich 7 Punkte.
+
+Schuss 1: 6
+Ergebnisse der Schuesse: 6;
+ Bisherige Gesamtpunktzahl: 6
+Sie muessen noch 4 mal 7 Treffer erzielen.
+Schuss 2: 6
+Ergebnisse der Schuesse: 6;6;
+ Bisherige Gesamtpunktzahl: 12
+Sie muessen noch 3 mal 7 Treffer erzielen.
+Schuss 3: 6
+Ergebnisse der Schuesse: 6;6;6;
+ Bisherige Gesamtpunktzahl: 18
+Sie muessen noch 2 mal 7 Treffer erzielen.
+Schuss 4: 9
+Ergebnisse der Schuesse: 6;6;6;9;
+ Bisherige Gesamtpunktzahl: 27
+Sie muessen noch 4 Treffer erzielen. Dies ist Ihr letzter Schuss.
+Schuss 5: 4
+Ergebnisse der Schuesse: 6;6;6;9;4;
+ Mit 31 Punkten haben Sie Ihr Ziel von 31 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 31 Punkte erzielt.
+Sie haben durchschnittlich 6.2 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

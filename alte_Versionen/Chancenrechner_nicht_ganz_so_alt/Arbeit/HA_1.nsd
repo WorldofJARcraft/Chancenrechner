@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;Prozedur Empfehlungen - Hauptalgorithmus des Programms Chancenrechner&#34;,,&#34;Teil 1&#34;" comment="" type="program" style="nice">
+ <children>
+
+<alternative text="&#34;ersterAufruf = wahr&#34;" comment="" color="FF8080">
+ <qTrue>
+
+<instruction text="&#34;ersterAufruf &#60;- falsch&#34;" comment="" color="FF8080" rotated="0"></instruction>
+<instruction text="&#34;zahl [optimum] = schuesse&#34;" comment="" color="FF8080" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<instruction text="&#34;frischgenullt &#60;- falsch&#34;" comment="" color="FF8080" rotated="0"></instruction>
+<instruction text="&#34;falschEingabe &#60;- wahr&#34;" comment="" color="FF8080" rotated="0"></instruction>
+<instruction text="&#34;gesamt &#60;- gesamt + aktuell&#34;" comment="" color="FF8080" rotated="0"></instruction>
+<instruction text="&#34;letzter &#60;- aktuell&#34;" comment="" color="FF8080" rotated="0"></instruction>
+<instruction text="&#34;ergebnisse [i] &#60;- aktuell&#34;" comment="" color="FF8080" rotated="0"></instruction>
+<alternative text="&#34;gesamt &#62;= ziel&#34;" comment="" color="FF8080">
+ <qTrue>
+
+<instruction text="&#34;nichtmehrzuerreichen &#60;- true&#34;" comment="" color="FF8080" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </children>
+</root>

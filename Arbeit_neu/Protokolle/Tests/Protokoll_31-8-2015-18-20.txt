@@ -1,0 +1,12 @@
+Schuesse: 1
+Zielpunkte: 1
+Empfehlungen werden gegeben zum Erreichen von 1 Punkten.
+Ihr Ziel: durschschnittlich 1 Punkte.
+
+Schuss 1: 1
+Ergebnisse der Schuesse: 1
+ Mit 1 Punkten haben Sie Ihr Ziel von 1 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 1 Punkte erzielt.
+Sie haben durchschnittlich 1 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="701.0" maxWidth="1054.00039999999" minHeight="699.0" minWidth="1023.0" prefHeight="699.999977929685" prefWidth="1054.00039999999" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chancenrechner.Chancenrechner_GUIController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <TextField fx:id="Schuesse" alignment="CENTER_RIGHT" layoutX="819.0" layoutY="15.0" prefHeight="25.0" prefWidth="84.0" text="10" />
+    <TextField fx:id="Ziel" alignment="CENTER_RIGHT" layoutX="819.0" layoutY="50.0" prefWidth="84.0" text="82" />
+    <Label fx:id="Label_1" layoutX="904.0" layoutY="18.0" text="er Serie" />
+    <Label fx:id="Label_3" layoutX="904.0" layoutY="54.0" text="Ringe sind Vorgabe" />
+    <TextArea fx:id="Schuetze" editable="false" layoutX="814.0" layoutY="331.0" prefHeight="200.0" prefWidth="220.000244140625" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font></TextArea>
+    <Button fx:id="Löschen" layoutX="819.0" layoutY="79.0" mnemonicParsing="false" onAction="#Löschen" prefHeight="59.0" prefWidth="84.0" text="Initialisieren" />
+    <Pane fx:id="flaeche" onMouseClicked="#mausklick" prefHeight="700.0" prefWidth="700.0">
+      <children>
+        <ImageView fx:id="imageview" fitHeight="684.0" fitWidth="685.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@Bilder/Zielscheibe_Gewehr_10m.png" />
+          </image>
+        </ImageView>
+      </children>
+    </Pane>
+    <Label layoutX="816.0" layoutY="299.0" text="Empfehlungen">
+      <font>
+        <Font size="12.0" />
+      </font>
+    </Label>
+    <TextField fx:id="Zeitanzeiger" alignment="CENTER" editable="false" prefHeight="92.0" prefWidth="291.5002999999924" style="-fx-font-size: 20pt;&#10;-fx-text-fill: green;" text="noch 15 min 0 s" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="747.5" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="577.0" />
+    <Label layoutX="819.0" layoutY="200.0" text="Einstellungen" />
+    <RadioButton fx:id="Gewehr" layoutX="819.0" layoutY="217.0" mnemonicParsing="false" onAction="#Gewehrbild" selected="true" text="Zielscheibe Gewehr 10 m">
+      <toggleGroup>
+        <ToggleGroup fx:id="group" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="Pistole" layoutX="819.0" layoutY="242.0" mnemonicParsing="false" onAction="#Pistolenbild" text="Zielscheibe Pistole 10 m" toggleGroup="$group" />
+      <Button fx:id="ueber" layoutX="819.0" layoutY="268.0" mnemonicParsing="false" onAction="#informieren" text="Über..." />
+  </children>
+</AnchorPane>

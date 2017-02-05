@@ -1,0 +1,50 @@
+Programm Chancenrechner Version 0.5 ALPHA
+ Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: alex
+Schuesse: 10 Serie 10 min.Zeit (5 Schuss=6 min, 10 =12, 20 = 30, 40=60min)
+Zielpunkte: 84 Ringe sind zu ereichen
+Das Ziel: durschschnittlich 8.4 Ringe.
+Start:16:30 Uhr
+
+Schuss 1: 9
+Ergebnisse der Schuesse: 9                                      9
+
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 2: 9
+Ergebnisse der Schuesse: 9;9;                                  18
+
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 3: 8
+Ergebnisse der Schuesse: 9;9;8;                                26
+
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 4: 9
+Ergebnisse der Schuesse: 9;9;8;9;                              35
+
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 5: 7
+Ergebnisse der Schuesse: 9;9;8;9;7;                            42
+
+Naechster Schuss: mindestens 722 Treffer; fehler
+Empfehlung: 9 oder mehr Ringe.
+Schuss 6: 7
+Ergebnisse der Schuesse: 9;9;8;9;7;7;                          49
+
+Naechster Schuss: mindestens 719 Treffer;  fehler
+Empfehlung: 9 oder mehr Ringe.
+Schuss 7: 8
+Ergebnisse der Schuesse: 9;9;8;9;7;7;8;                        57
+
+Naechster Schuss: mindestens 717 Treffer; fehler
+Empfehlung: 9 oder mehr Ringe.
+Schuss 8: 6
+Ergebnisse der Schuesse: 9;9;8;9;7;7;8;6;     gesamt Ring Zahl 63  du hast durchschnittlich 7.9 Ringe ereicht.
+Endzeit:16:36 Uhr
+Ziel nicht mehr erreichbar. Bitte erneut versuchen.Falscher Text es müssen noch 2 Schusse erfolgen.Program hat abgebrochen.
+
+Du hast 63 Ringe ereicht und benötigtest 6 minutend dafür, du hattest noch 4min.Zeit.

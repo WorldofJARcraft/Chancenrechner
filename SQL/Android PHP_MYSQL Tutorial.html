@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://www.tutorialspoint.com/android/android_php_mysql.htm -->
+<html class=" js no-touch csstransforms3d csstransitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Android PHP/MYSQL Tutorial</title>
+<meta name="description" content="Android PHP/MYSQL Tutorial - Learn Android Programming and how to develop android mobile phone and ipad applications starting from Environment setup, application components, activity lifecycle, service lifecycle, application architecture, publishing application, debugging applications, handling events, layouts, menus, user interface controls, styles and themes, handling rotation, fonts management, send email, data storage, managing media, send sms, phone calls.">
+<meta name="keywords" content="Android, programming, tutorial, beginners, develop, mobile phone, Environment Setup, Application Components, Activity Lifecycle, Service Lifecycle, Application Architecture, Publishing Application, Debugging Applications, Handling Events, Layouts, User Interface Controls, Styles and Themes, Handling Rotation, data storage, managing media, Send Email, Send SMS, Phone Calls.">
+<!--<base href="http://www.tutorialspoint.com/">--><base href=".">
+<link rel="shortcut icon" href="http://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="471319149685276">
+<meta property="og:site_name" content="www.tutorialspoint.com">
+<meta name="robots" content="index, follow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script type="text/javascript" src="./Android PHP_MYSQL Tutorial_files/script-min-v4.js"></script><style type="text/css"></style>
+<link rel="stylesheet" href="./Android PHP_MYSQL Tutorial_files/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #a5c63b url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #a5c63b !important;}
+.submenu-item{ border-bottom: 2px solid #a5c63b !important; border-top: 2px solid #a5c63b !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()" class="" style="padding-top: 0px;">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./Android PHP_MYSQL Tutorial_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="http://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="./Android PHP_MYSQL Tutorial_files/logo.png" style="height: auto; width: auto; display: inline-block; top: 0px;">
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com">
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == &#39;Search your tutorials...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search your tutorials...&#39;;}">
+               <input value="FORID:11" name="cof" type="hidden">
+               <input type="hidden" name="ie" value="ISO-8859-1">
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li> <a href="http://www.tutorialspoint.com/shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-question"></i> &nbsp;Quizzes</a> </li>
+            <li class="top-icons" style="display:none;">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 24px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="http://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library  <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.send18.com/" target="_blank"><i class="fa fa-send"></i>  Send18</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/online_file_conversion.htm"><i class="icon icon-refresh"></i>  Conversion</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/online_dev_tools.htm"><span class="dev-tools-menu">  Dev Tools</span></a></li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="./Android PHP_MYSQL Tutorial_files/android-mini-logo.jpg" alt="Android Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Android Basics</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/index.htm">Android - Home</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_overview.htm">Android - Overview</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_environment_setup.htm">Android - Environment Setup</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_architecture.htm">Android - Architecture</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_application_components.htm">Android - Application Components</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_hello_world_example.htm">Android - Hello World Example</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_resources.htm">Android - Resources</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_acitivities.htm">Android - Activities</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_services.htm">Android - Services</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_broadcast_receivers.htm">Android - Broadcast Receivers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_content_providers.htm">Android - Content Providers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_fragments.htm">Android - Fragments</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_intents_filters.htm">Android - Intents/Filters</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Android - User Interface</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_user_interface_layouts.htm">Android - UI Layouts</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_user_interface_controls.htm">Android - UI Controls</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_event_handling.htm">Android - Event Handling</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_styles_and_themes.htm">Android - Styles and Themes</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_custom_components.htm">Android - Custom Components</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Android Advanced Concepts</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_drag_and_drop.htm">Android - Drag and Drop</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_notifications.htm">Android - Notifications</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_location_based_services.htm">Location Based Services</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_sending_email.htm">Android - Sending Email</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_sending_sms.htm">Android - Sending SMS</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_phone_calls.htm">Android - Phone Calls</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_publishing_application.htm">Publishing Android Application</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Android Useful Examples</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_alert_dialoges.htm">Android - Alert Dialoges</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_animations.htm">Android - Animations</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_audio_capture.htm">Android - Audio Capture</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_audiomanager.htm">Android - AudioManager</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_auto_complete.htm">Android - Auto Complete</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_best_practices.htm">Android - Best Practices</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_bluetooth.htm">Android - Bluetooth</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_camera.htm">Android - Camera</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_clipboard.htm">Android - Clipboard</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_custom_fonts.htm">Android - Custom Fonts</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_data_backup.htm">Android - Data Backup</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_developer_tools.htm">Android - Developer Tools</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_emulator.htm">Android - Emulator</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_facebook_integration.htm">Android - Facebook Integration</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_gestures.htm">Android - Gestures</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_google_maps.htm">Android - Google Maps</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_image_effects.htm">Android - Image Effects</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_imageswitcher.htm">Android - ImageSwitcher</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_internal_storage.htm">Android - Internal Storage</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_jetplayer.htm">Android - JetPlayer</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_json_parser.htm">Android - JSON Parser</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_linkedin_integration.htm">Android - Linkedin Integration</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_loading_spinner.htm">Android - Loading Spinner</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_localization.htm">Android - Localization</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_login_screen.htm">Android - Login Screen</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_mediaplayer.htm">Android - MediaPlayer</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_multitouch.htm">Android - Multitouch</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_navigation.htm">Android - Navigation</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_network_connection.htm">Android - Network Connection</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_nfc_guide.htm">Android - NFC Guide</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_php_mysql.htm" style="background-color: rgb(214, 214, 214);">Android - PHP/MySQL</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_progress_circle.htm">Android - Progress Circle</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_progressbar.htm">Android - ProgressBar</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_push_notification.htm">Android - Push Notification</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_renderscript.htm">Android - RenderScript</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_rss_reader.htm">Android - RSS Reader</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_screen_cast.htm">Android - Screen Cast</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_sdk_manager.htm">Android - SDK Manager</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_sensors.htm">Android - Sensors</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_session_management.htm">Android - Session Management</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_shared_preferences.htm">Android - Shared Preferences</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_sip_protocol.htm">Android - SIP Protocol</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_spelling_checker.htm">Android - Spelling Checker</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_sqlite_database.htm">Android - SQLite Database</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_support_library.htm">Android - Support Library</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_testing.htm">Android - Testing</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_text_to_speech.htm">Android - Text to Speech</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_textureview.htm">Android - TextureView</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_twitter_integration.htm">Android - Twitter Integration</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_ui_deign.htm">Android - UI Deign</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_ui_patterns.htm">Android - UI Patterns</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_ui_testing.htm">Android - UI Testing</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_webview_layout.htm">Android - WebView Layout</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_wi_fi.htm">Android - Wi-Fi</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_widgets.htm">Android - Widgets</a>
+</li><li><a target="_top" href="http://www.tutorialspoint.com/android/android_xml_parsers.htm">Android - XML Parsers</a>
+</li></ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Android Useful Resources</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_questions_answers.htm">Android - Questions and Answers</a></li>
+<!--<li><a target="_top" href="/android/android_quick_guide.htm">Android - Quick Guide</a></li>-->
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_useful_resources.htm">Android - Useful Resources</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/android/android_discussion.htm">Android - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Android - PHP/MYSQL Tutorial</h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="./Android PHP_MYSQL Tutorial_files/"> 
+</script>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/android/android_nfc_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/android/android_progress_circle.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<p>In this chapter , we are going to explain, how you can integrate PHP and MYSQL with your android application. This is very useful in case you have a webserver, and you want to access its data on your android application.</p>
+<p>MYSQL is used as a database at the webserver and PHP is used to fetch data from the database. Our application will communicate with the PHP page with necessary parameters and PHP will contact MYSQL database and will fetch the result and return the results to us.</p>
+<h2>PHP - MYSQL</h2>
+<h3>Creating Database</h3>
+<p>MYSQL database can be created easily using this simple script. The <b>CREATE DATABASE</b> statement creates the database.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&lt;?</span><span class="pln">php
+$con</span><span class="pun">=</span><span class="pln">mysqli_connect</span><span class="pun">(</span><span class="str">"example.com"</span><span class="pun">,</span><span class="str">"username"</span><span class="pun">,</span><span class="str">"password"</span><span class="pun">);</span><span class="pln">
+$sql</span><span class="pun">=</span><span class="str">"CREATE DATABASE my_db"</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">mysqli_query</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">,</span><span class="pln">$sql</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   echo </span><span class="str">"Database my_db created successfully"</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">?&gt;</span></pre>
+<h3>Creating Tables</h3>
+<p>Once database is created, its time to create some tables in the database. The <b>CREATE TABLE</b> statement creates the database.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&lt;?</span><span class="pln">php
+$con</span><span class="pun">=</span><span class="pln">mysqli_connect</span><span class="pun">(</span><span class="str">"example.com"</span><span class="pun">,</span><span class="str">"username"</span><span class="pun">,</span><span class="str">"password"</span><span class="pun">,</span><span class="str">"my_db"</span><span class="pun">);</span><span class="pln">
+$sql</span><span class="pun">=</span><span class="str">"CREATE TABLE table1(Username CHAR(30),Password CHAR(30),Role CHAR(30))"</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">mysqli_query</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">,</span><span class="pln">$sql</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   echo </span><span class="str">"Table have been created successfully"</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">?&gt;</span></pre>
+<h3>Inserting Values in tables</h3>
+<p>When the database and tables are created. Now its time to insert some data into the tables. The <b>Insert Into</b> statement creates the database.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&lt;?</span><span class="pln">php
+$con</span><span class="pun">=</span><span class="pln">mysqli_connect</span><span class="pun">(</span><span class="str">"example.com"</span><span class="pun">,</span><span class="str">"username"</span><span class="pun">,</span><span class="str">"password"</span><span class="pun">,</span><span class="str">"my_db"</span><span class="pun">);</span><span class="pln">
+$sql</span><span class="pun">=</span><span class="str">"INSERT INTO table1 (FirstName, LastName, Age) VALUES ('admin', 'admin','adminstrator')"</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">mysqli_query</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">,</span><span class="pln">$sql</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   echo </span><span class="str">"Values have been inserted successfully"</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">?&gt;</span></pre>
+<h3>PHP - GET and POST methods</h3>
+<p>PHP is also used to fetch the record from the mysql database once it is created. In order to fetch record some information must be passed to PHP page regarding what record to be fetched.</p>
+<p>The first method to pass information is through GET method in which <b>$_GET</b> command is used. The variables are passed in the url and the record is fetched. Its syntax is given below −</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&lt;?</span><span class="pln">php
+$con</span><span class="pun">=</span><span class="pln">mysqli_connect</span><span class="pun">(</span><span class="str">"example.com"</span><span class="pun">,</span><span class="str">"username"</span><span class="pun">,</span><span class="str">"password"</span><span class="pun">,</span><span class="str">"database name"</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">mysqli_connect_errno</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   echo </span><span class="str">"Failed to connect to MySQL: "</span><span class="pln"> </span><span class="pun">.</span><span class="pln"> mysqli_connect_error</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+$username </span><span class="pun">=</span><span class="pln"> $_GET</span><span class="pun">[</span><span class="str">'username'</span><span class="pun">];</span><span class="pln">
+$password </span><span class="pun">=</span><span class="pln"> $_GET</span><span class="pun">[</span><span class="str">'password'</span><span class="pun">];</span><span class="pln">
+$result </span><span class="pun">=</span><span class="pln"> mysqli_query</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">,</span><span class="str">"SELECT Role FROM table1 where Username='$username' and Password='$password'"</span><span class="pun">);</span><span class="pln">
+$row </span><span class="pun">=</span><span class="pln"> mysqli_fetch_array</span><span class="pun">(</span><span class="pln">$result</span><span class="pun">);</span><span class="pln">
+$data </span><span class="pun">=</span><span class="pln"> $row</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];</span><span class="pln">
+
+</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">){</span><span class="pln">
+echo $data</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+mysqli_close</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">?&gt;</span></pre>
+<p>The second method is to use POST method. The only change in the above script is to replace $_GET with <b>$_POST</b>. In Post method , the variables are not passed through URL.</p>
+<h2>Android - Connecting MYSQL</h2>
+<h3>Connecting Via Get Method</h3>
+<p>There are two ways to connect to MYSQL via PHP page. The first one is called <b>Get method</b>. We will use <b>HttpGet</b> and <b>HttpClient</b> class to connect. Their syntax is given below −</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">URL url </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> URL</span><span class="pun">(</span><span class="pln">link</span><span class="pun">);</span><span class="pln">
+</span><span class="typ">HttpClient</span><span class="pln"> client </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DefaultHttpClient</span><span class="pun">();</span><span class="pln">
+</span><span class="typ">HttpGet</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">HttpGet</span><span class="pun">();</span><span class="pln">
+request</span><span class="pun">.</span><span class="pln">setURI</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> URI</span><span class="pun">(</span><span class="pln">link</span><span class="pun">));</span></pre>
+<p>After that you need to call <b>execute</b> method of HttpClient class and receive it in a HttpResponse object. After that you need to open streams to receive the data.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="typ">HttpResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> client</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="pln">request</span><span class="pun">);</span><span class="pln">
+</span><span class="typ">BufferedReader</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BufferedReader</span><span class="pln">
+</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">InputStreamReader</span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">getEntity</span><span class="pun">().</span><span class="pln">getContent</span><span class="pun">()));</span></pre>
+<h3>Connecting Via Post Method</h3>
+<p>In the Post method , the <b>URLEncoder</b>,<b>URLConnection</b> class will be used. The urlencoder will encode the information of the passing variables. It's syntax is given below −</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">URL url </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> URL</span><span class="pun">(</span><span class="pln">link</span><span class="pun">);</span><span class="pln">
+</span><span class="typ">String</span><span class="pln"> data  </span><span class="pun">=</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="str">"username"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">)</span><span class="pln"> 
+</span><span class="pun">+</span><span class="pln"> </span><span class="str">"="</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="pln">username</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">);</span><span class="pln">
+data </span><span class="pun">+=</span><span class="pln"> </span><span class="str">"&amp;"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="str">"password"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">)</span><span class="pln"> 
+</span><span class="pun">+</span><span class="pln"> </span><span class="str">"="</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="pln">password</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">);</span><span class="pln">
+</span><span class="typ">URLConnection</span><span class="pln"> conn </span><span class="pun">=</span><span class="pln"> url</span><span class="pun">.</span><span class="pln">openConnection</span><span class="pun">();</span><span class="pln"> </span></pre>
+<p>The last thing you need to do is to write this data to the link. After writing , you need to open stream to receive the responded data.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="typ">OutputStreamWriter</span><span class="pln"> wr </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">OutputStreamWriter</span><span class="pun">(</span><span class="pln">conn</span><span class="pun">.</span><span class="pln">getOutputStream</span><span class="pun">());</span><span class="pln"> 
+wr</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln"> data </span><span class="pun">);</span><span class="pln"> 
+</span><span class="typ">BufferedReader</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BufferedReader</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> 
+</span><span class="typ">InputStreamReader</span><span class="pun">(</span><span class="pln">conn</span><span class="pun">.</span><span class="pln">getInputStream</span><span class="pun">()));</span><span class="pln">			</span></pre>
+<h2>Example</h2>
+<p>The below example is a complete example of connecting your android application with MYSQL database via PHP page. It creates a basic application that allows you to login using GET and POST method.</p>
+<h3>PHP - MYSQL part</h3>
+<p>In this example a database with the name of temp has been created at 000webhost.com. In that database , a table has been created with the name of table1. This table has three fields. (Username, Password, Role). The table has only one record which is ("admin","admin","administrator").</p>
+<p>The php page has been given below which takes parameters by post method.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&lt;?</span><span class="pln">php
+$con</span><span class="pun">=</span><span class="pln">mysqli_connect</span><span class="pun">(</span><span class="str">"mysql10.000webhost.com"</span><span class="pun">,</span><span class="str">"username"</span><span class="pun">,</span><span class="str">"password"</span><span class="pun">,</span><span class="str">"db_name"</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">mysqli_connect_errno</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   echo </span><span class="str">"Failed to connect to MySQL: "</span><span class="pln"> </span><span class="pun">.</span><span class="pln"> mysqli_connect_error</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+$username </span><span class="pun">=</span><span class="pln"> $_POST</span><span class="pun">[</span><span class="str">'username'</span><span class="pun">];</span><span class="pln">
+$password </span><span class="pun">=</span><span class="pln"> $_POST</span><span class="pun">[</span><span class="str">'password'</span><span class="pun">];</span><span class="pln">
+$result </span><span class="pun">=</span><span class="pln"> mysqli_query</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">,</span><span class="str">"SELECT Role FROM table1 where 
+Username='$username' and Password='$password'"</span><span class="pun">);</span><span class="pln">
+$row </span><span class="pun">=</span><span class="pln"> mysqli_fetch_array</span><span class="pun">(</span><span class="pln">$result</span><span class="pun">);</span><span class="pln">
+$data </span><span class="pun">=</span><span class="pln"> $row</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];</span><span class="pln">
+
+</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">){</span><span class="pln">
+echo $data</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+mysqli_close</span><span class="pun">(</span><span class="pln">$con</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">?&gt;</span></pre>
+<h3>Android Part</h3>
+<p>To experiment with this example , you need to run this on an actual device on which wifi internet is connected.</p>
+<table class="table table-bordered">
+<tbody><tr><th>Steps</th><th>Description</th></tr>
+<tr><td>1</td><td>You will use Android studio IDE to create an Android application and name it as PHPMYSQL under a package com.example.phpmysql. While creating this project, make sure you Target SDK and Compile With at the latest version of Android SDK to use higher levels of APIs.</td></tr>
+<tr><td>2</td><td>Modify src/MainActivity.java file to add Activity code.</td></tr>
+<tr><td>3</td><td>Create src/SiginActivity.java file to add PHPMYSQL code.</td></tr>
+<tr><td>4</td><td>Modify layout XML file res/layout/activity_main.xml add any GUI component if required.</td></tr>
+<tr><td>5</td><td>Modify res/values/string.xml file and add necessary string components.</td></tr>
+<tr><td>6</td><td>Modify AndroidManifest.xml to add necessary permissions.</td></tr>
+<tr><td>7</td><td>Run the application and choose a running android device and install the application on it and verify the results.</td></tr>
+</tbody></table>
+<p>Here is the content of <b>src/com.example.phpmysql/MainActivity.java</b>.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">package</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">example</span><span class="pun">.</span><span class="pln">phpmysql</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">app</span><span class="pun">.</span><span class="typ">Activity</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">os</span><span class="pun">.</span><span class="typ">Bundle</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">view</span><span class="pun">.</span><span class="typ">Menu</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">view</span><span class="pun">.</span><span class="typ">View</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">widget</span><span class="pun">.</span><span class="typ">EditText</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">widget</span><span class="pun">.</span><span class="typ">TextView</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">MainActivity</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Activity</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+   </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">EditText</span><span class="pln"> usernameField</span><span class="pun">,</span><span class="pln">passwordField</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">TextView</span><span class="pln"> status</span><span class="pun">,</span><span class="pln">role</span><span class="pun">,</span><span class="pln">method</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="lit">@Override</span><span class="pln"> 
+   </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> onCreate</span><span class="pun">(</span><span class="typ">Bundle</span><span class="pln"> savedInstanceState</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">super</span><span class="pun">.</span><span class="pln">onCreate</span><span class="pun">(</span><span class="pln">savedInstanceState</span><span class="pun">);</span><span class="pln">
+      setContentView</span><span class="pun">(</span><span class="pln">R</span><span class="pun">.</span><span class="pln">layout</span><span class="pun">.</span><span class="pln">activity_main</span><span class="pun">);</span><span class="pln">
+      
+      usernameField </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">EditText</span><span class="pun">)</span><span class="pln">findViewById</span><span class="pun">(</span><span class="pln">R</span><span class="pun">.</span><span class="pln">id</span><span class="pun">.</span><span class="pln">editText1</span><span class="pun">);</span><span class="pln">
+      passwordField </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">EditText</span><span class="pun">)</span><span class="pln">findViewById</span><span class="pun">(</span><span class="pln">R</span><span class="pun">.</span><span class="pln">id</span><span class="pun">.</span><span class="pln">editText2</span><span class="pun">);</span><span class="pln">
+      
+      status </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">TextView</span><span class="pun">)</span><span class="pln">findViewById</span><span class="pun">(</span><span class="pln">R</span><span class="pun">.</span><span class="pln">id</span><span class="pun">.</span><span class="pln">textView6</span><span class="pun">);</span><span class="pln">
+      role </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">TextView</span><span class="pun">)</span><span class="pln">findViewById</span><span class="pun">(</span><span class="pln">R</span><span class="pun">.</span><span class="pln">id</span><span class="pun">.</span><span class="pln">textView7</span><span class="pun">);</span><span class="pln">
+      method </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">TextView</span><span class="pun">)</span><span class="pln">findViewById</span><span class="pun">(</span><span class="pln">R</span><span class="pun">.</span><span class="pln">id</span><span class="pun">.</span><span class="pln">textView9</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   
+   </span><span class="lit">@Override</span><span class="pln">
+   </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">boolean</span><span class="pln"> onCreateOptionsMenu</span><span class="pun">(</span><span class="typ">Menu</span><span class="pln"> menu</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="com">// Inflate the menu; this adds items to the action bar if it is present.</span><span class="pln">
+      getMenuInflater</span><span class="pun">().</span><span class="pln">inflate</span><span class="pun">(</span><span class="pln">R</span><span class="pun">.</span><span class="pln">menu</span><span class="pun">.</span><span class="pln">main</span><span class="pun">,</span><span class="pln"> menu</span><span class="pun">);</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   
+   </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> login</span><span class="pun">(</span><span class="typ">View</span><span class="pln"> view</span><span class="pun">){</span><span class="pln">
+      </span><span class="typ">String</span><span class="pln"> username </span><span class="pun">=</span><span class="pln"> usernameField</span><span class="pun">.</span><span class="pln">getText</span><span class="pun">().</span><span class="pln">toString</span><span class="pun">();</span><span class="pln">
+      </span><span class="typ">String</span><span class="pln"> password </span><span class="pun">=</span><span class="pln"> passwordField</span><span class="pun">.</span><span class="pln">getText</span><span class="pun">().</span><span class="pln">toString</span><span class="pun">();</span><span class="pln">
+      method</span><span class="pun">.</span><span class="pln">setText</span><span class="pun">(</span><span class="str">"Get Method"</span><span class="pun">);</span><span class="pln">
+      </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">SigninActivity</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln">status</span><span class="pun">,</span><span class="pln">role</span><span class="pun">,</span><span class="lit">0</span><span class="pun">).</span><span class="pln">execute</span><span class="pun">(</span><span class="pln">username</span><span class="pun">,</span><span class="pln">password</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="pun">}</span><span class="pln">
+   
+   </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> loginPost</span><span class="pun">(</span><span class="typ">View</span><span class="pln"> view</span><span class="pun">){</span><span class="pln">
+      </span><span class="typ">String</span><span class="pln"> username </span><span class="pun">=</span><span class="pln"> usernameField</span><span class="pun">.</span><span class="pln">getText</span><span class="pun">().</span><span class="pln">toString</span><span class="pun">();</span><span class="pln">
+      </span><span class="typ">String</span><span class="pln"> password </span><span class="pun">=</span><span class="pln"> passwordField</span><span class="pun">.</span><span class="pln">getText</span><span class="pun">().</span><span class="pln">toString</span><span class="pun">();</span><span class="pln">
+      method</span><span class="pun">.</span><span class="pln">setText</span><span class="pun">(</span><span class="str">"Post Method"</span><span class="pun">);</span><span class="pln">
+      </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">SigninActivity</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln">status</span><span class="pun">,</span><span class="pln">role</span><span class="pun">,</span><span class="lit">1</span><span class="pun">).</span><span class="pln">execute</span><span class="pun">(</span><span class="pln">username</span><span class="pun">,</span><span class="pln">password</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>Here is the content of <b>src/com.example.phpmysql/SigninActivity.java</b>.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">package</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">example</span><span class="pun">.</span><span class="pln">phpmysql</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.</span><span class="typ">BufferedReader</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.</span><span class="typ">InputStreamReader</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.</span><span class="typ">OutputStreamWriter</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">net</span><span class="pun">.</span><span class="pln">URI</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">net</span><span class="pun">.</span><span class="pln">URL</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">net</span><span class="pun">.</span><span class="typ">URLConnection</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">net</span><span class="pun">.</span><span class="typ">URLEncoder</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">import</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">http</span><span class="pun">.</span><span class="typ">HttpResponse</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">http</span><span class="pun">.</span><span class="pln">client</span><span class="pun">.</span><span class="typ">HttpClient</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">http</span><span class="pun">.</span><span class="pln">client</span><span class="pun">.</span><span class="pln">methods</span><span class="pun">.</span><span class="typ">HttpGet</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">http</span><span class="pun">.</span><span class="pln">impl</span><span class="pun">.</span><span class="pln">client</span><span class="pun">.</span><span class="typ">DefaultHttpClient</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">content</span><span class="pun">.</span><span class="typ">Context</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">os</span><span class="pun">.</span><span class="typ">AsyncTask</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">widget</span><span class="pun">.</span><span class="typ">TextView</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">SigninActivity</span><span class="pln">  </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">AsyncTask</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="typ">Void</span><span class="pun">,</span><span class="typ">String</span><span class="pun">&gt;{</span><span class="pln">
+   </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">TextView</span><span class="pln"> statusField</span><span class="pun">,</span><span class="pln">roleField</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Context</span><span class="pln"> context</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> byGetOrPost </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> 
+   
+   </span><span class="com">//flag 0 means get and 1 means post.(By default it is get.)</span><span class="pln">
+   </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">SigninActivity</span><span class="pun">(</span><span class="typ">Context</span><span class="pln"> context</span><span class="pun">,</span><span class="typ">TextView</span><span class="pln"> statusField</span><span class="pun">,</span><span class="typ">TextView</span><span class="pln"> roleField</span><span class="pun">,</span><span class="kwd">int</span><span class="pln"> flag</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">context </span><span class="pun">=</span><span class="pln"> context</span><span class="pun">;</span><span class="pln">
+      </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">statusField </span><span class="pun">=</span><span class="pln"> statusField</span><span class="pun">;</span><span class="pln">
+      </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">roleField </span><span class="pun">=</span><span class="pln"> roleField</span><span class="pun">;</span><span class="pln">
+      byGetOrPost </span><span class="pun">=</span><span class="pln"> flag</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   
+   </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> onPreExecute</span><span class="pun">(){</span><span class="pln">
+
+   </span><span class="pun">}</span><span class="pln">
+   
+   </span><span class="lit">@Override</span><span class="pln">
+   </span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> doInBackground</span><span class="pun">(</span><span class="typ">String</span><span class="pun">...</span><span class="pln"> arg0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">byGetOrPost </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">){</span><span class="pln"> </span><span class="com">//means by Get Method</span><span class="pln">
+      
+      </span><span class="kwd">try</span><span class="pun">{</span><span class="pln">
+         </span><span class="typ">String</span><span class="pln"> username </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">String</span><span class="pun">)</span><span class="pln">arg0</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];</span><span class="pln">
+         </span><span class="typ">String</span><span class="pln"> password </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">String</span><span class="pun">)</span><span class="pln">arg0</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];</span><span class="pln">
+         </span><span class="typ">String</span><span class="pln"> link </span><span class="pun">=</span><span class="pln"> </span><span class="str">"http://myphpmysqlweb.hostei.com/login.php?username="</span><span class="pun">+</span><span class="pln">username</span><span class="pun">+</span><span class="str">"&amp; password="</span><span class="pun">+</span><span class="pln">password</span><span class="pun">;</span><span class="pln">
+         
+         URL url </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> URL</span><span class="pun">(</span><span class="pln">link</span><span class="pun">);</span><span class="pln">
+         </span><span class="typ">HttpClient</span><span class="pln"> client </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DefaultHttpClient</span><span class="pun">();</span><span class="pln">
+         </span><span class="typ">HttpGet</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">HttpGet</span><span class="pun">();</span><span class="pln">
+         request</span><span class="pun">.</span><span class="pln">setURI</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> URI</span><span class="pun">(</span><span class="pln">link</span><span class="pun">));</span><span class="pln">
+         </span><span class="typ">HttpResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> client</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="pln">request</span><span class="pun">);</span><span class="pln">
+         </span><span class="typ">BufferedReader</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BufferedReader</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">InputStreamReader</span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">getEntity</span><span class="pun">().</span><span class="pln">getContent</span><span class="pun">()));</span><span class="pln">
+
+           </span><span class="typ">StringBuffer</span><span class="pln"> sb </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">StringBuffer</span><span class="pun">(</span><span class="str">""</span><span class="pun">);</span><span class="pln">
+           </span><span class="typ">String</span><span class="pln"> line</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln">
+           
+           </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">((</span><span class="pln">line </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">in</span><span class="pun">.</span><span class="pln">readLine</span><span class="pun">())</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+              sb</span><span class="pun">.</span><span class="pln">append</span><span class="pun">(</span><span class="pln">line</span><span class="pun">);</span><span class="pln">
+              </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+            </span><span class="kwd">in</span><span class="pun">.</span><span class="pln">close</span><span class="pun">();</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> sb</span><span class="pun">.</span><span class="pln">toString</span><span class="pun">();</span><span class="pln">
+         </span><span class="pun">}</span><span class="pln">
+         
+         </span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">Exception</span><span class="pln"> e</span><span class="pun">){</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">String</span><span class="pun">(</span><span class="str">"Exception: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> e</span><span class="pun">.</span><span class="pln">getMessage</span><span class="pun">());</span><span class="pln">
+         </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+      </span><span class="kwd">else</span><span class="pun">{</span><span class="pln">
+         </span><span class="kwd">try</span><span class="pun">{</span><span class="pln">
+            </span><span class="typ">String</span><span class="pln"> username </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">String</span><span class="pun">)</span><span class="pln">arg0</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];</span><span class="pln">
+            </span><span class="typ">String</span><span class="pln"> password </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">String</span><span class="pun">)</span><span class="pln">arg0</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];</span><span class="pln">
+            
+            </span><span class="typ">String</span><span class="pln"> link</span><span class="pun">=</span><span class="str">"http://myphpmysqlweb.hostei.com/loginpost.php"</span><span class="pun">;</span><span class="pln">
+            </span><span class="typ">String</span><span class="pln"> data  </span><span class="pun">=</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="str">"username"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">"="</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="pln">username</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">);</span><span class="pln">
+            data </span><span class="pun">+=</span><span class="pln"> </span><span class="str">"&amp;"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="str">"password"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">"="</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">URLEncoder</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="pln">password</span><span class="pun">,</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">);</span><span class="pln">
+            
+            URL url </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> URL</span><span class="pun">(</span><span class="pln">link</span><span class="pun">);</span><span class="pln">
+            </span><span class="typ">URLConnection</span><span class="pln"> conn </span><span class="pun">=</span><span class="pln"> url</span><span class="pun">.</span><span class="pln">openConnection</span><span class="pun">();</span><span class="pln"> 
+            
+            conn</span><span class="pun">.</span><span class="pln">setDoOutput</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">);</span><span class="pln"> 
+            </span><span class="typ">OutputStreamWriter</span><span class="pln"> wr </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">OutputStreamWriter</span><span class="pun">(</span><span class="pln">conn</span><span class="pun">.</span><span class="pln">getOutputStream</span><span class="pun">());</span><span class="pln"> 
+            
+            wr</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln"> data </span><span class="pun">);</span><span class="pln"> 
+            wr</span><span class="pun">.</span><span class="pln">flush</span><span class="pun">();</span><span class="pln"> 
+            
+            </span><span class="typ">BufferedReader</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BufferedReader</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">InputStreamReader</span><span class="pun">(</span><span class="pln">conn</span><span class="pun">.</span><span class="pln">getInputStream</span><span class="pun">()));</span><span class="pln">
+            
+            </span><span class="typ">StringBuilder</span><span class="pln"> sb </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">StringBuilder</span><span class="pun">();</span><span class="pln">
+            </span><span class="typ">String</span><span class="pln"> line </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln">
+            
+            </span><span class="com">// Read Server Response</span><span class="pln">
+            </span><span class="kwd">while</span><span class="pun">((</span><span class="pln">line </span><span class="pun">=</span><span class="pln"> reader</span><span class="pun">.</span><span class="pln">readLine</span><span class="pun">())</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln">
+            </span><span class="pun">{</span><span class="pln">
+               sb</span><span class="pun">.</span><span class="pln">append</span><span class="pun">(</span><span class="pln">line</span><span class="pun">);</span><span class="pln">
+               </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> sb</span><span class="pun">.</span><span class="pln">toString</span><span class="pun">();</span><span class="pln">
+         </span><span class="pun">}</span><span class="pln">
+         </span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">Exception</span><span class="pln"> e</span><span class="pun">){</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">String</span><span class="pun">(</span><span class="str">"Exception: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> e</span><span class="pun">.</span><span class="pln">getMessage</span><span class="pun">());</span><span class="pln">
+         </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   
+   </span><span class="lit">@Override</span><span class="pln">
+   </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> onPostExecute</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> result</span><span class="pun">){</span><span class="pln">
+      </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">statusField</span><span class="pun">.</span><span class="pln">setText</span><span class="pun">(</span><span class="str">"Login Successful"</span><span class="pun">);</span><span class="pln">
+      </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">roleField</span><span class="pun">.</span><span class="pln">setText</span><span class="pun">(</span><span class="pln">result</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>Here is the content of <b>activity_main.xml</b>.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="tag">&lt;RelativeLayout</span><span class="pln"> </span><span class="atn">xmlns:android</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/apk/res/android"</span><span class="pln">
+   </span><span class="atn">xmlns:tools</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/tools"</span><span class="pln">
+   </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"match_parent"</span><span class="pln">
+   </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"match_parent"</span><span class="pln">
+   </span><span class="atn">android:paddingBottom</span><span class="pun">=</span><span class="atv">"@dimen/activity_vertical_margin"</span><span class="pln">
+   </span><span class="atn">android:paddingLeft</span><span class="pun">=</span><span class="atv">"@dimen/activity_horizontal_margin"</span><span class="pln">
+   </span><span class="atn">android:paddingRight</span><span class="pun">=</span><span class="atv">"@dimen/activity_horizontal_margin"</span><span class="pln">
+   </span><span class="atn">android:paddingTop</span><span class="pun">=</span><span class="atv">"@dimen/activity_vertical_margin"</span><span class="pln">
+   </span><span class="atn">tools:context</span><span class="pun">=</span><span class="atv">".MainActivity"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;EditText</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/editText2"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignRight</span><span class="pun">=</span><span class="atv">"@+id/editText1"</span><span class="pln">
+      </span><span class="atn">android:layout_below</span><span class="pun">=</span><span class="atv">"@+id/editText1"</span><span class="pln">
+      </span><span class="atn">android:layout_marginTop</span><span class="pun">=</span><span class="atv">"25dp"</span><span class="pln">
+      </span><span class="atn">android:ems</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln">
+      </span><span class="atn">android:inputType</span><span class="pun">=</span><span class="atv">"textPassword"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/EditText&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;EditText</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/editText1"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignParentRight</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:layout_alignParentTop</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:layout_marginTop</span><span class="pun">=</span><span class="atv">"44dp"</span><span class="pln">
+      </span><span class="atn">android:ems</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;requestFocus</span><span class="pln"> </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;/EditText&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView1"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignBottom</span><span class="pun">=</span><span class="atv">"@+id/editText1"</span><span class="pln">
+      </span><span class="atn">android:layout_alignParentLeft</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/Username"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView3"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignParentTop</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:layout_centerHorizontal</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/App"</span><span class="pln">
+      </span><span class="atn">android:textAppearance</span><span class="pun">=</span><span class="atv">"?android:attr/textAppearanceLarge"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView7"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignBottom</span><span class="pun">=</span><span class="atv">"@+id/textView5"</span><span class="pln">
+      </span><span class="atn">android:layout_alignLeft</span><span class="pun">=</span><span class="atv">"@+id/textView6"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/Role"</span><span class="pln">
+      </span><span class="atn">android:textAppearance</span><span class="pun">=</span><span class="atv">"?android:attr/textAppearanceMedium"</span><span class="pln">
+      </span><span class="atn">android:textSize</span><span class="pun">=</span><span class="atv">"10sp"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView5"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_below</span><span class="pun">=</span><span class="atv">"@+id/textView6"</span><span class="pln">
+      </span><span class="atn">android:layout_marginTop</span><span class="pun">=</span><span class="atv">"27dp"</span><span class="pln">
+      </span><span class="atn">android:layout_toLeftOf</span><span class="pun">=</span><span class="atv">"@+id/editText1"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/LoginRole"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView8"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_above</span><span class="pun">=</span><span class="atv">"@+id/textView6"</span><span class="pln">
+      </span><span class="atn">android:layout_alignLeft</span><span class="pun">=</span><span class="atv">"@+id/textView5"</span><span class="pln">
+      </span><span class="atn">android:layout_marginBottom</span><span class="pun">=</span><span class="atv">"27dp"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/method"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView4"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignLeft</span><span class="pun">=</span><span class="atv">"@+id/textView8"</span><span class="pln">
+      </span><span class="atn">android:layout_below</span><span class="pun">=</span><span class="atv">"@+id/button1"</span><span class="pln">
+      </span><span class="atn">android:layout_marginTop</span><span class="pun">=</span><span class="atv">"86dp"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/LoginStatus"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView6"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignTop</span><span class="pun">=</span><span class="atv">"@+id/textView4"</span><span class="pln">
+      </span><span class="atn">android:layout_centerHorizontal</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/Status"</span><span class="pln">
+      </span><span class="atn">android:textAppearance</span><span class="pun">=</span><span class="atv">"?android:attr/textAppearanceMedium"</span><span class="pln">
+      </span><span class="atn">android:textSize</span><span class="pun">=</span><span class="atv">"10sp"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView9"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignBottom</span><span class="pun">=</span><span class="atv">"@+id/textView8"</span><span class="pln">
+      </span><span class="atn">android:layout_alignLeft</span><span class="pun">=</span><span class="atv">"@+id/textView6"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/Choose"</span><span class="pln">
+      </span><span class="atn">android:textAppearance</span><span class="pun">=</span><span class="atv">"?android:attr/textAppearanceMedium"</span><span class="pln">
+      </span><span class="atn">android:textSize</span><span class="pun">=</span><span class="atv">"10sp"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;Button</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/button2"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_centerVertical</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:layout_toRightOf</span><span class="pun">=</span><span class="atv">"@+id/textView6"</span><span class="pln">
+      </span><span class="atn">android:onClick</span><span class="pun">=</span><span class="atv">"loginPost"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/LoginPost"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;Button</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/button1"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignBaseline</span><span class="pun">=</span><span class="atv">"@+id/button2"</span><span class="pln">
+      </span><span class="atn">android:layout_alignBottom</span><span class="pun">=</span><span class="atv">"@+id/button2"</span><span class="pln">
+      </span><span class="atn">android:layout_alignLeft</span><span class="pun">=</span><span class="atv">"@+id/textView2"</span><span class="pln">
+      </span><span class="atn">android:onClick</span><span class="pun">=</span><span class="atv">"login"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/LoginGet"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;TextView</span><span class="pln">
+      </span><span class="atn">android:id</span><span class="pun">=</span><span class="atv">"@+id/textView2"</span><span class="pln">
+      </span><span class="atn">android:layout_width</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_height</span><span class="pun">=</span><span class="atv">"wrap_content"</span><span class="pln">
+      </span><span class="atn">android:layout_alignBaseline</span><span class="pun">=</span><span class="atv">"@+id/editText2"</span><span class="pln">
+      </span><span class="atn">android:layout_alignBottom</span><span class="pun">=</span><span class="atv">"@+id/editText2"</span><span class="pln">
+      </span><span class="atn">android:layout_alignParentLeft</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:text</span><span class="pun">=</span><span class="atv">"@string/Password"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/RelativeLayout&gt;</span></pre>
+<p>Here is the content of <b>Strings.xml</b>.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span><span class="pun">?&gt;</span><span class="pln">
+</span><span class="tag">&lt;resources&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"app_name"</span><span class="tag">&gt;</span><span class="pln">PHPMYSQL</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"action_settings"</span><span class="tag">&gt;</span><span class="pln">Settings</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"hello_world"</span><span class="tag">&gt;</span><span class="pln">Hello world!</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Username"</span><span class="tag">&gt;</span><span class="pln">Username</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Password"</span><span class="tag">&gt;</span><span class="pln">Password</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"LoginGet"</span><span class="tag">&gt;</span><span class="pln">Login - Get</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"LoginPost"</span><span class="tag">&gt;</span><span class="pln">Login - Post</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"App"</span><span class="tag">&gt;</span><span class="pln">Login Application</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"LoginStatus"</span><span class="tag">&gt;</span><span class="pln">Login Status</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"LoginRole"</span><span class="tag">&gt;</span><span class="pln">Login Role</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Status"</span><span class="tag">&gt;</span><span class="pln">Not login</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Role"</span><span class="tag">&gt;</span><span class="pln">Not assigned</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"method"</span><span class="tag">&gt;</span><span class="pln">Login Method</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+   </span><span class="tag">&lt;string</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Choose"</span><span class="tag">&gt;</span><span class="pln">Choose Method</span><span class="tag">&lt;/string&gt;</span><span class="pln">
+	
+</span><span class="tag">&lt;/resources&gt;</span></pre>
+<p>Here is the content of <b>AndroidManifest.xml</b>.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span><span class="pun">?&gt;</span><span class="pln">
+</span><span class="tag">&lt;manifest</span><span class="pln"> </span><span class="atn">xmlns:android</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/apk/res/android"</span><span class="pln">
+   </span><span class="atn">package</span><span class="pun">=</span><span class="atv">"com.example.phpmysql"</span><span class="pln">
+   </span><span class="atn">android:versionCode</span><span class="pun">=</span><span class="atv">"1"</span><span class="pln">
+   </span><span class="atn">android:versionName</span><span class="pun">=</span><span class="atv">"1.0"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;uses-sdk</span><span class="pln">
+      </span><span class="atn">android:minSdkVersion</span><span class="pun">=</span><span class="atv">"8"</span><span class="pln">
+      </span><span class="atn">android:targetSdkVersion</span><span class="pun">=</span><span class="atv">"17"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+      </span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.INTERNET"</span><span class="tag">/&gt;</span><span class="pln">
+      </span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_NETWORK_STATE"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+      
+   </span><span class="tag">&lt;application</span><span class="pln">
+      </span><span class="atn">android:allowBackup</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+      </span><span class="atn">android:icon</span><span class="pun">=</span><span class="atv">"@drawable/ic_launcher"</span><span class="pln">
+      </span><span class="atn">android:label</span><span class="pun">=</span><span class="atv">"@string/app_name"</span><span class="pln">
+      </span><span class="atn">android:theme</span><span class="pun">=</span><span class="atv">"@style/AppTheme"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">
+      
+      </span><span class="tag">&lt;activity</span><span class="pln">
+         </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"com.example.phpmysql.MainActivity"</span><span class="pln">
+         </span><span class="atn">android:label</span><span class="pun">=</span><span class="atv">"@string/app_name"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">
+         
+         </span><span class="tag">&lt;intent-filter&gt;</span><span class="pln">
+            </span><span class="tag">&lt;action</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.intent.action.MAIN"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+            </span><span class="tag">&lt;category</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.intent.category.LAUNCHER"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+         </span><span class="tag">&lt;/intent-filter&gt;</span><span class="pln">
+         
+      </span><span class="tag">&lt;/activity&gt;</span><span class="pln">
+      
+   </span><span class="tag">&lt;/application&gt;</span><span class="pln">
+</span><span class="tag">&lt;/manifest&gt;</span></pre>
+<p>Let's try to run your PHPMYSQL application. I assume you have connected your actual Android Mobile device with your computer. To run the app from Android studio, open one of your project's activity files and click Run <img class="inline" src="./Android PHP_MYSQL Tutorial_files/eclipse_run.jpg" alt="Eclipse Run Icon"> icon from the tool bar. Before starting your application, Android studio will display following window to select an option where you want to run your Android application.</p>
+<img src="./Android PHP_MYSQL Tutorial_files/choose_device.jpg" alt="Anroid PHP/MySQL Tutorial">
+<p>Select your mobile device as an option and then check your mobile device which will display following screen −</p>
+<img src="./Android PHP_MYSQL Tutorial_files/android_php_mysql1.jpg" alt="Anroid PHP/MySQL Tutorial">
+<p>Now just type in your username and password. In my case i am typing admin as username and password. It is shown in the figure −</p>
+<img src="./Android PHP_MYSQL Tutorial_files/android_php_mysql2.jpg" alt="Anroid PHP/MySQL Tutorial">
+<p>Now press the Get button and wait a few seconds and response will be downloaded and will be shown to you. In this case, the response is the ROLE that is fetched in case of admin as username and password.It is shown in the figure below −</p>
+<img src="./Android PHP_MYSQL Tutorial_files/android_php_mysql3.jpg" alt="Anroid PHP/MySQL Tutorial">
+<p>Now again press the POST button and same result would appear. It is shown in the figure below:</p>
+<img src="./Android PHP_MYSQL Tutorial_files/android_php_mysql4.jpg" alt="Anroid PHP/MySQL Tutorial">
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/android/android_nfc_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="http://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/android/android_progress_circle.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="./Android PHP_MYSQL Tutorial_files/">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.facebook.com/sharer.php?u=&#39; + &#39;http://www.tutorialspoint.com/android/android_php_mysql.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Android PHP_MYSQL Tutorial_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://twitter.com/share?url=&#39; + &#39;http://www.tutorialspoint.com/android/android_php_mysql.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Android PHP_MYSQL Tutorial_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.linkedin.com/cws/share?url=&#39; + &#39;http://www.tutorialspoint.com/android/android_php_mysql.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Android PHP_MYSQL Tutorial_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://plus.google.com/share?url=http://www.tutorialspoint.com/android/android_php_mysql.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Android PHP_MYSQL Tutorial_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/android/android_php_mysql.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Android PHP_MYSQL Tutorial_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://reddit.com/submit?url=http://www.tutorialspoint.com/android/android_php_mysql.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=656,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Android PHP_MYSQL Tutorial_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="./Android PHP_MYSQL Tutorial_files/">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="./Android PHP_MYSQL Tutorial_files/">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="./Android PHP_MYSQL Tutorial_files/">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="http://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="./Android PHP_MYSQL Tutorial_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="http://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2016. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == &#39;Enter email for newsletter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter email for newsletter...&#39;;}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="./Android PHP_MYSQL Tutorial_files/custom-min.js"></script><a class="scroll-to-top" href="http://www.tutorialspoint.com/#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="./Android PHP_MYSQL Tutorial_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+
+
+
+<div class="autocomplete-suggestions " style="top: 57px; left: 1206.5px; width: 345px;"></div></body></html>

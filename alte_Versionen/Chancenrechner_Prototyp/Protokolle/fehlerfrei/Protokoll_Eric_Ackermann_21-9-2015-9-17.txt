@@ -1,0 +1,63 @@
+Programm Chancenrechner Version 0.5 ALPHA
+ Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: Eric_Ackermann
+Schuesse: 10
+Zielpunkte: 0
+
+Eingabefehler. Frage erneut ab.
+Zielpunkte: 1
+Empfehlungen werden gegeben zum Erreichen von 10 Punkten.
+Ihr Ziel: durschschnittlich 1 Punkte.
+
+Schuss 1: 0
+Ergebnisse der Schuesse: 0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 2: 0
+Ergebnisse der Schuesse: 0;0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 3: 0
+Ergebnisse der Schuesse: 0;0;0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 4: 0
+Ergebnisse der Schuesse: 0;0;0;0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 5: 0
+Ergebnisse der Schuesse: 0;0;0;0;0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 6: 0
+Ergebnisse der Schuesse: 0;0;0;0;0;0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 7: 0
+Ergebnisse der Schuesse: 0;0;0;0;0;0;0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 8: 0
+Ergebnisse der Schuesse: 0;0;0;0;0;0;0;0;
+ Bisherige Gesamtpunktzahl: 0
+Naechster Schuss: beliebig;
+Empfehlung: 1 Treffer.
+Schuss 9: 0
+Ergebnisse der Schuesse: 0;0;0;0;0;0;0;0;0;
+ Bisherige Gesamtpunktzahl: 0
+Sie muessen noch 1 Treffer erzielen. Dies ist Ihr letzter Schuss.
+Schuss 10: 1
+Ergebnisse der Schuesse: 0;0;0;0;0;0;0;0;0;1;
+ Mit 1 Punkten haben Sie Ihr Ziel von 1 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 1 Punkte erzielt.
+Sie haben durchschnittlich 0.1 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

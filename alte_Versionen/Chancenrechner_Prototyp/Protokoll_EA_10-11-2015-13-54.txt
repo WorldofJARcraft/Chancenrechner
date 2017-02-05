@@ -1,0 +1,29 @@
+Programm Chancenrechner Version 0.5 ALPHA
+Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: EA
+Serie: 5
+Ringe zu erreichen: 40
+Das Ziel: durschschnittlich 8 Ringe.
+
+Schuss 1: 9
+Gesamtringzahl: 9;
+Naechster Schuss: mindestens 1 Ringe;
+Empfehlung: 8 oder mehr Ringe.
+Schuss 2: 8
+Gesamtringzahl: 17;
+Naechster Schuss: mindestens 3 Ringe;
+Empfehlung: 8 oder mehr Ringe.
+Schuss 3: 8
+Gesamtringzahl: 25;
+Naechster Schuss: mindestens 5 Ringe;
+Empfehlung: 8 oder mehr Ringe.
+Schuss 4: 8
+Gesamtringzahl: 33;
+Sie muessen noch 7 Ringe erzielen. Dies ist Ihr letzter Schuss.
+Schuss 5: 9
+Gesamtringzahl: 42;
+Sie haben 42 Ringe erzielt und dafuer 0 Minuten 38 Sekunden gebraucht.
+Sie haben durchschnittlich 8.4 Ringe erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielringzahl erreicht.
+

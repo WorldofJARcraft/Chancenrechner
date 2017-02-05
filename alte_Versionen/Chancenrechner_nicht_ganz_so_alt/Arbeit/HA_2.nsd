@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;Prozedur Empfehlungen - Hauptalgorithmus des Programms Chancenrechner&#34;,,&#34;Teil 2&#34;" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="&#34;Schreib &#34;&#34;Gesamtringzahl: &#34;&#34; + gesamt + &#34;&#34;;&#34;&#34;&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+<alternative text="&#34;echteschuesse != 1&#34;" comment="" color="FFFF80">
+ <qTrue>
+
+<instruction text="&#34;Schreib &#34;&#34;Letzter Schuss: &#34;&#34;+ letzter&#34;" comment="" color="FFFF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<alternative text="!nichtmehrzuerreichen" comment="" color="FFFFFF">
+ <qTrue>
+
+<alternative text="&#34;!((i == schuesse - 1) || nichtmehrzuerreichen)&#34;" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="&#34;nurabgearbeitet &#60;- false&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<alternative text="&#34;aktuell &#60; optimum&#34;" comment="" color="80FF80">
+ <qTrue>
+
+<alternative text="&#34;aktuell + Guthaben &#62;= optimum&#34;" comment="" color="80FF80">
+ <qTrue>
+
+<instruction text="&#34;Guthaben &#60;- Guthaben - optimum - aktuell;&#34;" comment="" color="80FF80" rotated="1"></instruction>
+ </qTrue>
+ <qFalse>
+
+<alternative text="&#34;zahl [optimum] &#62; 0 &#38;&#38; zahl [aktuell] &#60;= 0&#34;" comment="" color="80FF80">
+ <qTrue>
+
+<instruction text="&#34;zahl [optimum] &#60;- zahl [optimum] - 1&#34;" comment="" color="80FF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<alternative text="&#34;zahl [aktuell] &#62; 0&#34;" comment="" color="80FF80">
+ <qTrue>
+
+<instruction text="&#34;zahl [aktuell] &#60;- Zahl [aktuell] - 1&#34;" comment="" color="80FF80" rotated="1"></instruction>
+<instruction text="&#34;nurabgearbeitet &#60;- true&#34;" comment="" color="80FF80" rotated="1"></instruction>
+ </qTrue>
+ <qFalse>
+
+<instruction text="&#34;zwischensumme &#60;- 0&#34;" comment="" color="80FF80" rotated="0"></instruction>
+<for text="&#34;FÜR j  &#60;- 0 BIS 11&#34;" comment="" color="80FF80">
+ <qFor>
+
+<instruction text="&#34;zwischensumme &#60;- zwischensumme + zahl [j]&#34;" comment="" color="80FF80" rotated="0"></instruction>
+ </qFor>
+</for>
+<alternative text="&#34;optimum + (optimum - aktuell) &#62;= 0&#34;" comment="" color="80FF80">
+ <qTrue>
+
+ </qTrue>
+ <qFalse>
+
+<alternative text="&#34;optimum + (optimum - aktuell) &#60;= 10&#34;" comment="" color="80FF80">
+ <qTrue>
+
+<alternative text="&#34;zwischensumme + 1 &#60;= (schuesse - (i + 1))&#34;" comment="" color="80FF80">
+ <qTrue>
+
+<instruction text="&#34;zahl [optimum + (optimum - aktuell)]&#34;,&#34;&#60;- zahl [optimum + (optimum - aktuell)] + 1&#34;" comment="" color="80FF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+<for text="&#34;FÜR j &#60;- 0 BIS 11&#34;" comment="" color="80FF80">
+ <qFor>
+
+<instruction text="&#34;zahl [j] = 0&#34;" comment="" color="80FF80" rotated="0"></instruction>
+ </qFor>
+</for>
+<instruction text="&#34;optimum = Aufrunden((ziel - gesamt) / (schuesse - (i + 1)))&#34;" comment="" color="80FF80" rotated="0"></instruction>
+<instruction text="&#34;Guthaben &#60;- optimum * (schuesse - (i + 1)) - (ziel - gesamt);&#34;" comment="" color="80FF80" rotated="0"></instruction>
+<instruction text="&#34;frischgenullt &#60;- wahr&#34;" comment="" color="80FF80" rotated="0"></instruction>
+<alternative text="&#34;optimum &#62; 10&#34;" comment="" color="80FF80">
+ <qTrue>
+
+<instruction text="&#34;nichtmehrzuerreichen &#60;- wahr&#34;" comment="" color="80FF80" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+<instruction text="&#34; zahl [optimum] &#60;- schuesse - (i + 1);&#34;" comment="" color="80FF80" rotated="0"></instruction>
+ </qFalse>
+</alternative>
+ </qFalse>
+</alternative>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qFalse>
+</alternative>
+ </qFalse>
+</alternative>
+ </qFalse>
+</alternative>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<alternative text="&#34;aktuell &#62; optimum &#38;&#38; !frischgenullt&#34;" comment="" color="80FFFF">
+ <qTrue>
+
+<instruction text="&#34;(prinzipiell gleiches Vorgehen wie im entgegengesetzten Fall)&#34;" comment="" color="80FFFF" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+<alternative text="&#34;zahl [optimum] &#62; 0 &#38;&#38; !nurabgearbeitet &#38;&#38; !frischgenullt&#34;" comment="" color="FF80C0">
+ <qTrue>
+
+<instruction text="&#34;zahl [optimum] &#60;- zahl [optimum] -1&#34;" comment="" color="FF80C0" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </qTrue>
+ <qFalse>
+
+ </qFalse>
+</alternative>
+ </children>
+</root>

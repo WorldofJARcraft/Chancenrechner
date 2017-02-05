@@ -1,0 +1,14 @@
+Programm Chancenrechner Version 0.5 ALPHA
+Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: EA
+Serie: 1
+Ringe zu erreichen: 1
+Das Ziel: durschschnittlich 1 Ringe.
+
+Schuss 1: 1
+Gesamtringzahl: 1;Sie haben die zur Verfügung stehende Zeit überschritten.
+Sie haben 1 Ringe erzielt.
+Sie haben durchschnittlich 1 Ringe erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielringzahl erreicht.
+

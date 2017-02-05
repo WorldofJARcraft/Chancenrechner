@@ -1,0 +1,68 @@
+Programm Chancenrechner Version 0.4 ALPHA
+ Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: EA
+Schuesse: 10
+Zielpunkte: 66
+Empfehlungen werden gegeben zum Erreichen von 70 Punkten.
+Ihr Ziel: durschschnittlich 7 Punkte.
+
+Schuss 1: 10
+Ergebnisse der Schuesse: 10;
+ Bisherige Gesamtpunktzahl: 10
+Naechster Schuss: beliebig;
+Empfehlung: 7 Treffer.
+Sie muessen noch 9 mal 7 Treffer erzielen.
+Schuss 2: 9
+Ergebnisse der Schuesse: 10;9;
+ Bisherige Gesamtpunktzahl: 19
+Naechster Schuss: beliebig;
+Empfehlung: 6 Treffer.
+Sie muessen noch 8 mal 6 Treffer erzielen.
+Schuss 3: 8
+Ergebnisse der Schuesse: 10;9;8;
+ Bisherige Gesamtpunktzahl: 27
+Naechster Schuss: beliebig;
+Empfehlung: 6 Treffer.
+Sie muessen noch 7 mal 6 Treffer erzielen.
+Schuss 4: 7
+Ergebnisse der Schuesse: 10;9;8;7;
+ Bisherige Gesamtpunktzahl: 34
+Naechster Schuss: beliebig;
+Empfehlung: 6 Treffer.
+Sie muessen noch 6 mal 6 Treffer erzielen.
+Schuss 5: 0
+Ergebnisse der Schuesse: 10;9;8;7;0;
+ Bisherige Gesamtpunktzahl: 34
+Naechster Schuss: beliebig;
+Empfehlung: 7 Treffer.
+Sie muessen noch 5 mal 7 Treffer erzielen.
+Schuss 6: 9
+Ergebnisse der Schuesse: 10;9;8;7;0;9;
+ Bisherige Gesamtpunktzahl: 43
+Naechster Schuss: beliebig;
+Empfehlung: 6 Treffer.
+Sie muessen noch 4 mal 6 Treffer erzielen.
+Schuss 7: 10
+Ergebnisse der Schuesse: 10;9;8;7;0;9;10;
+ Bisherige Gesamtpunktzahl: 53
+Naechster Schuss: beliebig;
+Empfehlung: 5 Treffer.
+Sie muessen noch 3 mal 5 Treffer erzielen.
+Schuss 8: 1
+Ergebnisse der Schuesse: 10;9;8;7;0;9;10;1;
+ Bisherige Gesamtpunktzahl: 54
+Naechster Schuss:mindestens 524 Treffer;
+Empfehlung: 6 Treffer.
+Sie muessen noch 2 mal 6 Treffer erzielen.
+Schuss 9: 2
+Ergebnisse der Schuesse: 10;9;8;7;0;9;10;1;2;
+ Bisherige Gesamtpunktzahl: 56
+Sie muessen noch 10 Treffer erzielen. Dies ist Ihr letzter Schuss.
+Schuss 10: 10
+Ergebnisse der Schuesse: 10;9;8;7;0;9;10;1;2;10;
+ Mit 66 Punkten haben Sie Ihr Ziel von 66 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 66 Punkte erzielt.
+Sie haben durchschnittlich 6.6 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

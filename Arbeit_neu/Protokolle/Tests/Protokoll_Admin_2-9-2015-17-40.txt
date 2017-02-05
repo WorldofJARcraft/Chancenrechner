@@ -1,0 +1,32 @@
+Programm Chancenrechner Version 0.4 ALPHA
+ Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: Admin
+Schuesse: 5
+Zielpunkte: 35
+Empfehlungen werden gegeben zum Erreichen von 35 Punkten.
+Ihr Ziel: durschschnittlich 7 Punkte.
+
+Schuss 1: 10
+Ergebnisse der Schuesse: 10;
+ Bisherige Gesamtpunktzahl: 10
+Sie muessen noch 4 mal 7 Treffer erzielen.
+Schuss 2: 7
+Ergebnisse der Schuesse: 10;7;
+ Bisherige Gesamtpunktzahl: 17
+Sie muessen noch 3 mal 7 Treffer erzielen.
+Schuss 3: 5
+Ergebnisse der Schuesse: 10;7;5;
+ Bisherige Gesamtpunktzahl: 22
+Sie muessen noch 2 mal 7 Treffer erzielen.
+Schuss 4: 6
+Ergebnisse der Schuesse: 10;7;5;6;
+ Bisherige Gesamtpunktzahl: 28
+Sie muessen noch 7 Treffer erzielen. Dies ist Ihr letzter Schuss.
+Schuss 5: 10
+Ergebnisse der Schuesse: 10;7;5;6;10;
+ Mit 38 Punkten haben Sie Ihr Ziel von 35 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 38 Punkte erzielt.
+Sie haben durchschnittlich 7.6 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

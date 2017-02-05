@@ -1,0 +1,48 @@
+Bitte geben Sie Name oder ID des Schützen ein. Josi
+Schuesse: 10
+Vorgabe: 83
+Das Ziel: durschschnittlich 8.3 Ringe.
+15 Minuten 0 Sekunden übrig
+
+Schuss 1: 6
+Gesamtringzahl: 6;
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 2: 6
+Gesamtringzahl: 12;
+Letzter Schuss: 6
+Naechster Schuss: mindestens 1 Ringe;
+Empfehlung: 9 oder mehr Ringe.
+Schuss 3: 9
+Gesamtringzahl: 21;
+Letzter Schuss: 9
+Naechster Schuss: mindestens 2 Ringe;
+Empfehlung: 9 oder mehr Ringe.
+Schuss 4: 6
+Gesamtringzahl: 27;
+Letzter Schuss: 6
+Naechster Schuss: mindestens 6 Ringe;
+Empfehlung: 10 Ringe.
+Schuss 5: 6
+Gesamtringzahl: 33;
+Letzter Schuss: 6
+Naechster Schuss: mindestens 10 Ringe;
+Schuss 6: 10
+Gesamtringzahl: 43;
+Letzter Schuss: 10
+Naechster Schuss: mindestens 10 Ringe;
+Schuss 7: 10
+Gesamtringzahl: 53;
+Letzter Schuss: 10
+Naechster Schuss: mindestens 10 Ringe;
+Schuss 8: 7
+Gesamtringzahl: 60;
+Letzter Schuss: 7
+Schuss 9: 8
+Gesamtringzahl: 68;
+Letzter Schuss: 8
+Schuss 10: 6
+
+Sie haben 74 Ringe erzielt und dafür 9 Minuten und 16 Sekunden gebraucht.
+Sie haben durchschnittlich 7.4 Ringe erzielt.
+Vorgabe nicht erreicht.

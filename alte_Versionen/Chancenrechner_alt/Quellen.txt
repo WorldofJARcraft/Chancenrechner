@@ -1,0 +1,5 @@
+http://sniper-24.de/bilder/produkte/gross/289.jpg
+http://blog.mynotiz.de/tag/swing/
+TBRA:
+http://stackoverflow.com/questions/16764549/timers-and-javafx
+http://tomasmikula.github.io/blog/2014/06/04/timers-in-javafx-and-reactfx.html

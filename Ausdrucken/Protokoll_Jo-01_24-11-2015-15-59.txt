@@ -1,0 +1,43 @@
+Programm Chancenrechner Version 0.5 ALPHA
+Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: Jo-01
+Serie: 10
+Ringe zu erreichen: 78
+Das Ziel: durschschnittlich 7.8 Ringe.
+
+Schuss 1: 5
+Gesamtringzahl: 5;
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 2: 7
+Gesamtringzahl: 12;
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 3: 9
+Gesamtringzahl: 21;
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 4: 4
+Gesamtringzahl: 25;
+Naechster Schuss: mindestens 3 Ringe;
+Empfehlung: 9 oder mehr Ringe.
+Schuss 5: 7
+Gesamtringzahl: 32;
+Naechster Schuss: mindestens 6 Ringe;
+Schuss 6: 7
+Gesamtringzahl: 39;
+Naechster Schuss: mindestens 9 Ringe;
+Schuss 7: 7
+Gesamtringzahl: 46;
+Naechster Schuss:
+Schuss 8: 8
+Gesamtringzahl: 54;
+Schuss 9: 7
+Gesamtringzahl: 61;
+Schuss 10: 8
+Gesamtringzahl: 69;
+Sie haben 69 Ringe erzielt und dafuer 1 Minuten 7 Sekunden gebraucht.
+Sie haben durchschnittlich 6.9 Ringe erzielt.
+Sie haben Ihr Ziel leider nicht erreicht.
+
