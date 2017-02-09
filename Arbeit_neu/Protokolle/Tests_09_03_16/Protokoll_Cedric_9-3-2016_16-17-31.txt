@@ -1,0 +1,54 @@
+Bitte geben Sie Name oder ID des Schützen ein. Cedric
+Schuesse: 10
+Vorgabe: 82
+Das Ziel: durschschnittlich 8.2 Ringe.
+15 Minuten 0 Sekunden übrig
+
+Schuss 1: 9
+Gesamtringzahl: 9;
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 2: 8
+Gesamtringzahl: 17;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 3: 9
+Gesamtringzahl: 26;
+Letzter Schuss: 9
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 4: 8
+Gesamtringzahl: 34;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 5: 9
+Gesamtringzahl: 43;
+Letzter Schuss: 9
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 6: 8
+Gesamtringzahl: 51;
+Letzter Schuss: 8
+Naechster Schuss: mindestens 1 Ringe;
+Empfehlung: 9 oder mehr Ringe.
+Schuss 7: 8
+Gesamtringzahl: 59;
+Letzter Schuss: 8
+Naechster Schuss: mindestens 3 Ringe;
+Empfehlung: 9 oder mehr Ringe.
+Schuss 8: 7
+Gesamtringzahl: 66;
+Letzter Schuss: 7
+Naechster Schuss: mindestens 6 Ringe;
+Empfehlung: 9 oder mehr Ringe.
+Schuss 9: 10
+Gesamtringzahl: 76;
+Letzter Schuss: 10
+Sie muessen noch 6 Ringe erzielen. Dies ist Ihr letzter Schuss.
+Schuss 10: 9
+
+Sie haben 85 Ringe erzielt und dafür 4 Minuten und 19 Sekunden gebraucht.
+Sie haben durchschnittlich 8.5 Ringe erzielt.
+Vorgabe erreicht.

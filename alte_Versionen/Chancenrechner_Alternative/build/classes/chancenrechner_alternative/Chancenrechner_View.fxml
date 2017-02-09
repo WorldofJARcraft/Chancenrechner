@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="215.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chancenrechner_alternative.Chancenrechner_ViewController">
+   <children>
+      <Label fx:id="Label_OL" layoutX="14.0" layoutY="14.0" text="Verbleibende Schüsse" />
+      <Label fx:id="Label_UL" layoutX="14.0" layoutY="169.0" text="aktueller Schuss" />
+      <Label fx:id="Label_M" layoutX="154.0" layoutY="91.0" text="Ist" />
+      <Label fx:id="Label_OR" layoutX="248.0" layoutY="14.0" text="Ringe (Soll)" />
+      <Label layoutX="222.0" layoutY="169.0" text="nächster Schuss" />
+      <TextField fx:id="schuesse" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="102.0" text="10" />
+      <TextField fx:id="aktuell" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="186.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="85.0" text="0" />
+      <TextField fx:id="Ist" alignment="CENTER_RIGHT" editable="false" layoutX="130.0" layoutY="108.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+      <TextField fx:id="ziel" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="31.0" prefHeight="25.0" prefWidth="60.0" text="60" />
+      <TextField fx:id="naechster" alignment="CENTER_RIGHT" editable="false" layoutX="222.0" layoutY="186.0" prefHeight="25.0" prefWidth="84.0" text="beliebig" />
+   </children>
+</AnchorPane>

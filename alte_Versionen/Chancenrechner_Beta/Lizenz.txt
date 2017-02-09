@@ -1,0 +1,95 @@
+LIZENZ- UND BENUTZUNGSBESTIMMUNGEN 
+==================================== 
+
+Allgemein 
+Software, Informationen und Dokumentation sind wie sie sind, ohne Garantie 
+irgendwelcher Art. 
+
+Garantie 
+In keinem Fall ist der Autor verantwortlich für Schäden, 
+direkter oder indirekter Art, Verlust von Geschäftsvorhaben und den dadurch 
+verursachten Verlust oder einer anderen Beschädigung, selbst dann nicht, wenn
+der Autor über die Möglichkeit dieser Schäden zuvor in Kenntnis gesetzt wurde. 
+Der Benutzer ist verpflichtet, tägliche Sicherungen seiner Daten zu machen, so 
+dass bei Verlust dieser die Daten jederzeit wieder hergestellt werden können. 
+Der Benutzer trägt sämtliche Risiken und Verantwortungen! 
+
+Einschränkungen 
+Die Software darf nirgends eingesetzt, installiert und betrieben werden, wenn 
+durch Ausfall Menschen zu Schaden kommen können oder erheblicher Schaden oder 
+Gefahren verursacht werden können. 
+
+Lizenzierung 
+Diese Software darf auf einem Computersystem installiert werden. Es darf eine
+Kopie zur Datensicherung erstellt werden. Die Weitergabe darf nur unendgeltlich
+unter der selben Lizenz erfolgen. 
+
+Eigentum 
+Die Software ist Eigentum des Autors. Dekompilierung oder Deassembilierung ist 
+strengstens verboten. 
+Veränderungen an der Software, Dokumentation oder dem Verteilungsarchiv sind 
+strengstens verboten und verletzen das Copyright und die Urheberrechte des 
+Autors. 
+
+Weitergabe 
+Die Weitergabe ist im privaten Rahmen erlaubt. 
+Die Software darf nicht ohne ausdrückliche Genehmigung des Autors zum Download 
+auf Internetseiten, Servern und anderen Medien angeboten werden. 
+
+Copyright und Urheberrecht 
+Das Copyright und alle weiteren Rechte an dieser Software liegen 
+(c)2016 bei Eric Ackermann, Schreckenbachweg 8, 07743 Jena. 
+
+Wichtig 
+Sollten Sie einem dieser Punkte nicht zustimmen, müssen sie die Software von 
+allen Ihren Datenträgern löschen und dürfen die Software nicht weiter 
+benutzen. 
+
+
+
+============================ 
+LICENSE, TERMS OF CONDITION 
+============================ 
+
+General 
+The software, information and documentation is as it is, without warranty of any 
+kind. 
+
+Guarantee 
+In no case the author is responsible for any damages, direct or indirect, 
+loss of business projects and the resulting loss or other damage, even in case, the
+author has been informed about this possibility. 
+The user is required to make daily backups of his data, so that with this 
+loss the data can be restored at any time. 
+The user assumes all risks and resposibilities! 
+
+Restrictions 
+The software may be not used, not be installed and not operated if any human 
+can be harmed from failure or substantial damage or danger can be caused. 
+
+Licensing 
+This software is licensed to run on one computer / server. 
+One copy may be created for backup. This software may only be relayed at the same
+license. 
+
+Property 
+The software is the property of the author. Decompilation or disassembiling is 
+strictly prohibited. 
+Changes to the software, documentation or distribution is strictly prohibited 
+and violate the copyright laws and the copyright of the author. 
+
+Transfer 
+The passing is allowed noncorporately. 
+The software may not be offered without the permission of the author for 
+download on websites, servers or other media. 
+
+Copyright and other rights 
+The copyright and all rights to this software are in Mr. Eric Ackermann, Schreckenbachweg
+8, 07743 Jena. 
+
+Important 
+If you do not agree with any of these points, you must delete the software 
+from all your disks and may not continue using the software. 
+
+27.02.2016 
+Copyright (c)2016 by Eric Ackermann

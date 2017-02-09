@@ -1,0 +1,90 @@
+Programm Chancenrechner Version 0.4 ALPHA
+ Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: Eric_Ackermann
+Schuesse: 20
+Zielpunkte: 123
+Empfehlungen werden gegeben zum Erreichen von 124 Punkten.
+Ihr Ziel: durschschnittlich 6.2 Punkte.
+
+Schuss 1: 5
+Ergebnisse der Schuesse: 5;
+ Bisherige Gesamtpunktzahl: 5
+Sie muessen noch 19 mal 6.3 Treffer erzielen.
+Schuss 2: 2
+Ergebnisse der Schuesse: 5;2;
+ Bisherige Gesamtpunktzahl: 7
+Sie muessen noch 18 mal 6.5 Treffer erzielen.
+Schuss 3: 2
+Ergebnisse der Schuesse: 5;2;2;
+ Bisherige Gesamtpunktzahl: 9
+Sie muessen noch 17 mal 6.8 Treffer erzielen.
+Schuss 4: 8
+Ergebnisse der Schuesse: 5;2;2;8;
+ Bisherige Gesamtpunktzahl: 17
+Sie muessen noch 16 mal 6 Treffer erzielen.
+Schuss 5: 1
+Ergebnisse der Schuesse: 5;2;2;8;1;
+ Bisherige Gesamtpunktzahl: 18
+Sie muessen noch 15 mal 7 Treffer erzielen.
+Schuss 6: 10
+Ergebnisse der Schuesse: 5;2;2;8;1;10;
+ Bisherige Gesamtpunktzahl: 28
+Sie muessen noch 14 mal 6 Treffer erzielen.
+Schuss 7: 6
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;
+ Bisherige Gesamtpunktzahl: 34
+Sie muessen noch 13 mal 6 Treffer erzielen.
+Schuss 8: 6
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;
+ Bisherige Gesamtpunktzahl: 40
+Sie muessen noch 12 mal 6 Treffer erzielen.
+Schuss 9: 9
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;
+ Bisherige Gesamtpunktzahl: 49
+Sie muessen noch 11 mal 6 Treffer erzielen.
+Schuss 10: 2
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;
+ Bisherige Gesamtpunktzahl: 51
+Sie muessen noch 10 mal 7.2 Treffer erzielen.
+Schuss 11: 4
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;
+ Bisherige Gesamtpunktzahl: 55
+Sie muessen noch 9 mal 7.6 Treffer erzielen.
+Schuss 12: 10
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;
+ Bisherige Gesamtpunktzahl: 65
+Sie muessen noch 8 mal 7 Treffer erzielen.
+Schuss 13: 6
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;
+ Bisherige Gesamtpunktzahl: 71
+Sie muessen noch 7 mal 7.5 Treffer erzielen.
+Schuss 14: 8
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;8;
+ Bisherige Gesamtpunktzahl: 79
+Sie muessen noch 6 mal 7 Treffer erzielen.
+Schuss 15: 3
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;8;3;
+ Bisherige Gesamtpunktzahl: 82
+Sie muessen noch 5 mal 8.2 Treffer erzielen.
+Schuss 16: 3
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;8;3;3;
+ Bisherige Gesamtpunktzahl: 85
+Sie muessen noch 4 mal 9.5 Treffer erzielen.
+Schuss 17: 1
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;8;3;3;1;
+ Bisherige Gesamtpunktzahl: 86
+Ziel nicht mehr erreichbar. Bitte erneut versuchen.
+Schuss 18: 4
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;8;3;3;1;4;
+ Bisherige Gesamtpunktzahl: 90
+Schuss 19: 3
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;8;3;3;1;4;3;
+ Bisherige Gesamtpunktzahl: 93
+Schuss 20: 7
+Ergebnisse der Schuesse: 5;2;2;8;1;10;6;6;9;2;4;10;6;8;3;3;1;4;3;7;
+ Bisherige Gesamtpunktzahl: 100
+Sie haben 100 Punkte erzielt.
+Sie haben durchschnittlich 5 Treffer erzielt.
+Sie haben Ihr Ziel leider nicht erreicht.
+

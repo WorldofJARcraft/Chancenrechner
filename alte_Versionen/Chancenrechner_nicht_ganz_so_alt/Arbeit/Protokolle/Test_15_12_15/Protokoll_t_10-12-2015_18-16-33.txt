@@ -1,0 +1,52 @@
+Bitte geben Sie Name oder ID des Schützen ein. t
+Schuesse: 10
+Vorgabe: 82
+Das Ziel: durschschnittlich 8.2 Ringe.
+15 Minuten 0 Sekunden übrig
+
+Schuss 1: 5
+Gesamtringzahl: 5;
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 2: 9
+Gesamtringzahl: 14;
+Letzter Schuss: 9
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 3: 8
+Gesamtringzahl: 22;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 9 oder mehr Ringe.
+Schuss 4: 4
+Gesamtringzahl: 26;
+Letzter Schuss: 4
+Naechster Schuss: mindestens 6 Ringe;
+Empfehlung: 10 Ringe.
+Schuss 5: 10
+Gesamtringzahl: 36;
+Letzter Schuss: 10
+Naechster Schuss: mindestens 6 Ringe;
+Empfehlung: 10 Ringe.
+Schuss 6: 9
+Gesamtringzahl: 45;
+Letzter Schuss: 9
+Naechster Schuss: mindestens 7 Ringe;
+Empfehlung: 10 Ringe.
+Schuss 7: 8
+Gesamtringzahl: 53;
+Letzter Schuss: 8
+Naechster Schuss: mindestens 9 Ringe;
+Empfehlung: 10 Ringe.
+Schuss 8: 9
+Gesamtringzahl: 62;
+Letzter Schuss: 9
+Naechster Schuss: mindestens 10 Ringe;
+Schuss 9: 8
+Gesamtringzahl: 70;
+Letzter Schuss: 8
+Schuss 10: 9
+
+Sie haben 79 Ringe erzielt und dafür 3 Minuten und 55 Sekunden gebraucht.
+Sie haben durchschnittlich 7.9 Ringe erzielt.
+Vorgabe nicht erreicht.

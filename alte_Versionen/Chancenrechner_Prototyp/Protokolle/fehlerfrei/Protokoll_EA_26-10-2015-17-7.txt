@@ -1,0 +1,17 @@
+Programm Chancenrechner Version 0.5 ALPHA
+Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: EA
+Serie: 2
+Ringe zu erreichen: 10
+Das Ziel: durschschnittlich 5 Ringe.
+
+Schuss 1: 5
+Gesamtringzahl: 5;
+Sie muessen noch 5 Ringe erzielen. Dies ist Ihr letzter Schuss.
+Schuss 2: 5
+Gesamtringzahl: 10;
+Sie haben 10 Ringe erzielt und dafuer 1 Minuten 76 Sekunden gebraucht.
+Sie haben durchschnittlich 5 Ringe erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielringzahl erreicht.
+

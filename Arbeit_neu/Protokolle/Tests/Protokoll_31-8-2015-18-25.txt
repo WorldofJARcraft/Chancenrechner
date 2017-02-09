@@ -1,0 +1,19 @@
+Schuesse: -1000
+
+Eingabefehler. Frage erneut ab.
+Schuesse:2
+Zielpunkte: 1
+Empfehlungen werden gegeben zum Erreichen von 2 Punkten.
+Ihr Ziel: durschschnittlich 1 Punkte.
+
+Schuss 1: 0
+Ergebnisse der Schuesse: 0
+ Bisherige Gesamtpunktzahl: 0, noch zu erreichen: 1 Punkte.
+Sie muessen noch 1 Treffer erzielen. Dies ist Ihr letzter Schuss.
+Schuss 2: 1
+Ergebnisse der Schuesse: 01
+ Mit 1 Punkten haben Sie Ihr Ziel von 1 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 1 Punkte erzielt.
+Sie haben durchschnittlich 0.5 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

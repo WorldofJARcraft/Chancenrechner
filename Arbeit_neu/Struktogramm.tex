@@ -1,0 +1,85 @@
+\documentclass[a4paper]{article}
+\usepackage{german}
+\usepackage{struktex}
+
+  \begin{struktogramm}(824,933)[Prozedur\ Empfehlungen]
+     \ifthenelse{6}{6}{\(ersterAufruf\ =\ wahr\ \)}{T}{F}
+      \assign{\(ersterAufruf\ \gets\ falsch\)}
+      \assign{\(zahl\ [optimum]\ =\ schuesse\)}
+    \ifend
+    \assign{\(frischgenullt\ \gets\ falsch\)}
+    \assign{\(falschEingabe\ \gets\ wahr\)}
+    \assign{\(gesamt\ \gets\ gesamt\ +\ aktuell\)}
+    \assign{\(ergebnisse\ [i]\ \gets\ aktuell\)}
+    \assign{\(Schreib\ "Gesamtringzahl:\ "\ +\ gesamt\ +\ ";"\)}
+    \assign{\(letzter\ \gets\ aktuell\)}
+     \ifthenelse{6}{6}{\(echteschuesse\ !=\ 1\ \)}{T}{F}
+      \assign{\(Schreib\ "Letzter\ Schuss:\ "+\ letzter\)}
+    \ifend
+     \ifthenelse{6}{6}{\(gesamt\ >=\ ziel\ \)}{T}{F}
+      \assign{\(nichtmehrzuerreichen\ \gets\ true\)}
+    \ifend
+     \ifthenelse{6}{6}{\(!nichtmehrzuerreichen\ \)}{T}{F}
+       \ifthenelse{6}{6}{\(!((i\ ==\ schuesse\ -\ 1)\ ||\ nichtmehrzuerreichen)\ \)}{T}{F}
+        \assign{\(nurabgearbeitet\ \gets\ false\)}
+         \ifthenelse{6}{6}{\(aktuell\ <\ optimum\ \)}{T}{F}
+           \ifthenelse{6}{6}{\(aktuell\ +\ Guthaben\ >=\ optimum\ \)}{T}{F}
+            \assign{\(Guthaben\ \gets\ Guthaben\ -\ optimum\ -\ aktuell;\)}
+          \change
+             \ifthenelse{6}{6}{\(zahl\ [optimum]\ >\ 0\ &&\ zahl\ [aktuell]\ <=\ 0\ \)}{T}{F}
+              \assign{\(zahl\ [optimum]\ \gets\ zahl\ [optimum]\ -\ 1\)}
+            \ifend
+             \ifthenelse{6}{6}{\(zahl\ [aktuell]\ >\ 0\ \)}{T}{F}
+              \assign{\(zahl\ [aktuell]\ \gets\ Zahl\ [aktuell]\ -\ 1\)}
+              \assign{\(nurabgearbeitet\ \gets\ true\)}
+            \change
+              \assign{\(zwischensumme\ \gets\ 0\)}
+              \forever
+                \assign{\(zwischensumme\ \gets\ zwischensumme\ +\ zahl\ [j]\)}
+              \foreverend
+               \ifthenelse{6}{6}{\(optimum\ +\ (optimum\ -\ aktuell)\ >=\ 0\ &&\ optimum\ +\ (optimum\ -\ aktuell)\ <=\ 10\ &&\ zwischensumme\ +\ 1\ <=\ (schuesse\ -\ (i\ +\ 1))\ \)}{T}{F}
+                \assign{\(zahl\ [optimum\ +\ (optimum\ -\ aktuell)]\ \gets\ zahl\ [optimum\ +\ (optimum\ -\ aktuell)]\ +\ 1\)}
+              \change
+                \forever
+                  \assign{\(zahl\ [j]\ =\ 0\)}
+                \foreverend
+                \assign{\(optimum\ =\ Aufrunden((ziel\ -\ gesamt)\ /\ (schuesse\ -\ (i\ +\ 1)))\)}
+                \assign{\(Guthaben\ \gets\ optimum\ *\ (schuesse\ -\ (i\ +\ 1))\ -\ (ziel\ -\ gesamt);\)}
+                \assign{\(frischgenullt\ \gets\ wahr\)}
+                 \ifthenelse{6}{6}{\(optimum\ >\ 10\ \)}{T}{F}
+                  \assign{\(nichtmehrzuerreichen\ \gets\ wahr\)}
+                \change
+                  \assign{\(\ zahl\ [optimum]\ \gets\ schuesse\ -\ (i\ +\ 1);\)}
+                \ifend
+              \ifend
+            \ifend
+          \ifend
+        \ifend
+         \ifthenelse{6}{6}{\(aktuell\ >\ optimum\ &&\ !frischgenullt\ \)}{T}{F}
+          \assign{\((prinzipiell\ gleiches\ Vorgehen\ wie\ im\ entgegengesetzten\ Fall)\)}
+        \ifend
+         \ifthenelse{6}{6}{\(zahl\ [optimum]\ >\ 0\ &&\ !nurabgearbeitet\ &&\ !frischgenullt\ \)}{T}{F}
+          \assign{\(zahl\ [optimum]\ \gets\ zahl\ [optimum]\ -1\)}
+        \ifend
+         \ifthenelse{6}{6}{\(i\ =\ schuesse\ -\ 2\ &&\ (ziel\ -\ gesamt)\ <\ 11\ &&\ !nichtmehrzuerreichen\ \)}{T}{F}
+          \assign{\(Schreib\ "Sie\ muessen\ noch\ "\ +\ (ziel\ -\ gesamt)\ +\ "\ Ringe\ erzielen.\ Dies\ ist\ Ihr\ letzter\ Schuss."\)}
+        \change
+           \ifthenelse{6}{6}{\(i\ !=\ schuesse\ -\ 1\ \)}{T}{F}
+            \assign{\(Schreib\ "Naechster\ Schuss:"\)}
+             \ifthenelse{6}{6}{\((schuesse\ -\ (i\ +\ 2))\ *\ 10\ +\ gesamt\ >=\ ziel\ ||\ (ziel\ -\ ((schuesse\ -\ (i\ +\ 2))\ *\ 10\ +\ gesamt))\ >\ 10\ \)}{T}{F}
+            \change
+              \assign{\(Schreib\ "\ mindestens\ "\ +\ (ziel\ -\ ((schuesse\ -\ (i\ +\ 2))\ *\ 10\ +\ gesamt))\ +\ "\ Ringe;"\)}
+            \ifend
+            \assign{\(j\ \gets\ 0\)}
+            \while{\(SOLANGE\ zahl\ [j]\ =\ 0\ &&\ j\ <\ 10\)}
+              \assign{\(j\ \gets\ j\ +\ 1\)}
+            \whileend
+             \ifthenelse{6}{6}{\((j\ <\ 10\ ||\ zahl[10]\ >\ 0)\ &&\ j\ !=\ (ziel\ -\ ((schuesse\ -\ (i\ +\ 2))\ *\ 10\ +\ gesamt))\ \)}{T}{F}
+              \assign{\(Schreib\ "Empfehlung:\ "\ +\ j\ +\ "\ oder\ mehr\ Ringe."\)}
+            \ifend
+            \assign{\(i\ \gets\ i\ +\ 1\)}
+          \ifend
+        \ifend
+      \ifend
+    \ifend
+  \end{struktogramm}

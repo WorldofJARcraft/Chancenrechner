@@ -1,0 +1,25 @@
+Schuesse: 8
+Zielpunkte: 55
+Empfehlungen werden gegeben zum Erreichen von 56 Punkten.
+Ihr Ziel: durschschnittlich 7 Punkte.
+
+Schuss 1: 3
+Ergebnisse der Schuesse: 3
+ Bisherige Gesamtpunktzahl: 3, noch zu erreichen: 52 Punkte.
+Sie muessen noch 7 mal 8 Treffer erzielen.
+Schuss 2: 9
+Ergebnisse der Schuesse: 39
+ Bisherige Gesamtpunktzahl: 12, noch zu erreichen: 43 Punkte.
+Sie muessen noch 6 mal 8 Treffer erzielen.
+Schuss 3: 3
+Ergebnisse der Schuesse: 393
+ Bisherige Gesamtpunktzahl: 15, noch zu erreichen: 40 Punkte.
+Sie muessen noch 5 mal 8 Treffer erzielen.
+Schuss 4: 0
+Ergebnisse der Schuesse: 3930
+ Bisherige Gesamtpunktzahl: 15, noch zu erreichen: 40 Punkte.
+Sie muessen noch 4 mal 10 Treffer erzielen.
+Schuss 5: 3
+Ergebnisse der Schuesse: 39303
+ Bisherige Gesamtpunktzahl: 18, noch zu erreichen: 37 Punkte.
+Ziel nicht mehr erreichbar.

@@ -1,0 +1,82 @@
+@charset "ISO-8859-1";
+/* 20090810 */
+
+
+
+body {font-size: 8pt;}
+body#dpmaaktuell {font-size: 12pt;}
+
+#sprungnav, #hauptnav, #hauptnavbox, #hauptnavblock, #navblock, #unavblock, #kopfblock, #footer, #zusatz, .indswitch,
+#dpmaaktuell #sprungnav, #dpmaaktuell kopfblock, #dpmaaktuell #hauptnavblock, #dpmaaktuell #navblock, #dpmaaktuell #footer, #dpmaaktuell #kopf, #dpmaaktuell #kopfblock, #dpmaaktuell #zusatz, #hausmitteilung #sprungnav, #hausmitteilung kopfblock, #hausmitteilung #hauptnavblock, #hausmitteilung #navblock, #hausmitteilung #footer, #hausmitteilung #kopf, #hausmitteilung #kopfblock, #hausmitteilung #zusatz, .iconlink {display: none;}
+
+#aussen {margin: 0; border: none;}
+
+
+/* damit text neben bild nicht umbricht */
+#inhalt .bild {float: left;}
+
+
+#inhalt h1 {font-size: 11pt;}
+#inhalt h2 {font-size: 10pt;}
+#inhalt h3, #inhalt h4, #inhalt h5, #inhalt h6 {font-size: 9pt;}
+
+
+
+table, table.rdsTable, table.ergebnis  {font-size: 6pt;}
+
+
+
+/*  bugfixes  */
+
+#innen, #zusatz {float: none;} /*  ie7  */
+
+.hidden {display: none;} 
+
+#hauptnavbox  {display: none;}
+
+
+
+
+
+/* listen www und intranet only  */
+
+#inhalt ul, ul.verteiler{
+list-style-type: disc;
+}
+
+#inhalt ul ul{
+list-style-type: circle;
+}
+
+#inhalt ul li, ul.verteiler li{
+list-style-image: none!important;
+}
+
+#inhalt ul li ul li, ul.verteiler li ul li{
+list-style-image: none!important;
+}
+
+#inhalt ul li li li{
+list-style-image: none!important;
+}
+
+
+
+
+/* intranet */
+h1.dpamaaktuell img {width: 100%;}
+#inhalt .dpmaakthg {background-color: #000;}
+
+
+/* publikationen only */
+.imageEntry .images, .imageEntry table.ergebnis, .imageEntry {float:none !important;} 
+/* 070301 (float-problematik) schafft im ie6 korrekte bildanzeige, bildanzeige linksbuendig */
+
+
+
+/* index */
+#index #aussen {
+	border-left: 252px solid #fff; /* hglinke spalte #aussenbg */
+}	
+
+

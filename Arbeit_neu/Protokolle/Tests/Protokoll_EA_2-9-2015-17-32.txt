@@ -1,0 +1,20 @@
+Schuetze: EASchuesse: 3
+Zielpunkte: 15
+Empfehlungen werden gegeben zum Erreichen von 15 Punkten.
+Ihr Ziel: durschschnittlich 5 Punkte.
+
+Schuss 1: 10
+Ergebnisse der Schuesse: 10;
+ Bisherige Gesamtpunktzahl: 10
+Sie muessen noch 2 mal 3 Treffer erzielen.
+Schuss 2: 1
+Ergebnisse der Schuesse: 10;1;
+ Bisherige Gesamtpunktzahl: 11
+Sie muessen noch 4 Treffer erzielen. Dies ist Ihr letzter Schuss.
+Schuss 3: 6
+Ergebnisse der Schuesse: 10;1;6;
+ Mit 17 Punkten haben Sie Ihr Ziel von 15 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 17 Punkte erzielt.
+Sie haben durchschnittlich 5.66667 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

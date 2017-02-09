@@ -1,0 +1,19 @@
+Programm Chancenrechner Version 0.4 ALPHA
+ Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: EA
+Schuesse: 2
+Zielpunkte: 2
+Empfehlungen werden gegeben zum Erreichen von 2 Punkten.
+Ihr Ziel: durschschnittlich 1 Punkte.
+
+Schuss 1: 2
+Ergebnisse der Schuesse: 2;
+ Mit 2 Punkten haben Sie Ihr Ziel von 2 Punkten erreicht. Ihnen stehen noch 1 Schuesse zur Verfuegung.
+Schuss 2: 2
+Ergebnisse der Schuesse: 2;2;
+ Mit 4 Punkten haben Sie Ihr Ziel von 2 Punkten erreicht. Ihnen stehen noch 0 Schuesse zur Verfuegung.
+Sie haben 4 Punkte erzielt.
+Sie haben durchschnittlich 2 Treffer erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielpunktzahl erreicht.
+

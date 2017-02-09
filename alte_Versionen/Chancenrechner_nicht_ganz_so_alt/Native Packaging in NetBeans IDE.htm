@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://netbeans.org/kb/docs/java/native_pkg.html -->
+<html><!--
+Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved.
+--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Native Packaging in NetBeans IDE</title>
+<meta name="KEYWORDS" content="NETBEANS, NATIVE PACKAGING, JAVAFX, JAVA SE">
+<meta name="DESCRIPTION" content="Native Packaging in NetBeans IDE">
+
+<link rel="SHORTCUT ICON" href="https://netbeans.org/images_www/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./Native Packaging in NetBeans IDE_files/netbeans3.css" media="screen">
+<script type="text/javascript" src="./Native Packaging in NetBeans IDE_files/jquery-1.6.2.min.js"></script>
+<script src="./Native Packaging in NetBeans IDE_files/lang-pulldown.js" type="text/javascript"></script>
+<script src="./Native Packaging in NetBeans IDE_files/html5.js" type="text/javascript"></script>
+<script src="./Native Packaging in NetBeans IDE_files/companion-projects.js" type="text/javascript"></script>
+<!--[if lt IE 10]>
+    <script type="text/javascript" src="//netbeans.org/images_www/pie/PIE.js"></script>
+<![endif]-->
+<script language="JavaScript" type="text/javascript">
+ <!--
+ var username="guest";
+ //-->
+ </script>
+<link rel="stylesheet" type="text/css" href="./Native Packaging in NetBeans IDE_files/netbeans3.css" media="screen">
+</head>
+	<body class="blue-bg">
+        <div id="wrapper-flex"><div id="hdr">
+                    <div id="lang-sel"><div class="lang-dropdown"><script type="text/javascript">startList()</script>
+    <ul id="nav">
+    <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#" style="text=decoration:none;color:white;">Choose page language<img src="./Native Packaging in NetBeans IDE_files/icon_arrow_language.png" border="0" alt="choose" id="lang-arrow" width="7" height="10"></a>
+    <ul class="submenu">
+    <li><a href="https://netbeans.org/kb/docs/java/native_pkg_pt_BR.html">Brazilian&nbsp;Portuguese</a></li>
+<li><a href="https://netbeans.org/kb/docs/java/native_pkg_ja.html">Japanese</a></li>
+<li><a href="https://netbeans.org/kb/docs/java/native_pkg_ru.html">Russian</a></li>
+<li><a href="https://netbeans.org/kb/docs/java/native_pkg_zh_CN.html">Simplified&nbsp;Chinese</a></li>
+</ul></li></ul></div>
+		</div><div id="navtabs">
+                    <a href="https://netbeans.org/"><img src="./Native Packaging in NetBeans IDE_files/logo_netbeans_red.png" id="nblogo" width="130" height="32"></a>
+<ul><li class="hover first"><a href="https://netbeans.org/features/index.html" title="NetBeans IDE">NetBeans IDE</a></li><li class="hover "><a href="https://netbeans.org/features/platform/index.html" title="NetBeans Platform">NetBeans Platform</a></li><li class="hover "><a href="https://netbeans.org/enterprise/index.html" title="Enterprise">Enterprise</a></li><li class="hover "><a href="http://plugins.netbeans.org/PluginPortal/" title="Plugins">Plugins</a></li><li class="current "><a href="https://netbeans.org/kb/index.html" title="Docs &amp; Support">Docs &amp; Support</a></li><li class="hover "><a href="https://netbeans.org/community/index.html" title="Community">Community</a></li></ul> <div id="search-div">
+                        <form action="https://netbeans.org/search_result.html" id="cse-search-box">
+                            <input type="hidden" name="cx" value="006102455337629464213:mt38ytkbuak">
+                            <input type="hidden" name="cof" value="FORID:11">
+                            <input type="text" id="search-input" value="Search" name="q">
+                            <input type="image" src="./Native Packaging in NetBeans IDE_files/icon_search.png" id="magnifier" alt="search">
+                        </form>
+                    </div>
+                </div>
+            </div><div id="navig-breadcrumbs"><a href="https://netbeans.org/index.html">HOME</a>  / <a href="https://netbeans.org/kb/index.html">Docs &amp; Support</a> </div>
+                 <!-- start content area -->
+					<div id="middle">
+					<table class="colapse full-width f-page-table-2col"> <!-- main content table -->
+					<tbody><tr>
+					<td class="valign-top"><!-- main content cell, testwww page is here --><div id="print"><a href="https://netbeans.org/kb/docs/java/native_pkg.html?print=yes"><img src="./Native Packaging in NetBeans IDE_files/print.gif" alt="" width="105" height="15" border="0"></a></div><div class="f-page-auto-cell" id="doc">
+
+        <h1>Native Packaging in NetBeans IDE</h1>
+		<div class="articledate" style="margin-left: 0px;">Written by Petr Somol and Alyona Stashkova</div>
+        <p>Native packaging was first introduced as a part of the JavaFX 2.2 SDK enabling you to package an application as a <i>native bundle</i> and then  installing and running the application without any external   dependencies on a system JRE or JavaFX SDK. Next it became usable for Java SE projects as well.</p>
+		<p> Native packaging does not change the deployment model of your application: it takes your application as it is,  packages it together with Java runtime, and produces an installer that is common for the operating system you are using. The point is to make the whole thing independent on whatever Java runtime users have or do not have on the target machine. You can take such an installer and run it on a machine where there is no trace of Java, and it will install both the application and the necessary Java runtime bits.The size of such installers is quite big,  because even a "Hello world" application will carry with itself a large portion of Java runtime artifacts.</p>
+		<p>In this tutorial you will create an  <tt>EXE</tt> installer for a Java SE application and an <tt>MSI</tt> installer for a JavaFX application for the Windows operating system based on the sample applications bundled with the IDE.</p>
+		<p class="notes"><b>Note:</b> </p>
+		<ul><li>The <tt>EXE</tt> and <tt>MSI</tt> installers you get are platform-specific, they will run only on a system that is compatible with the target Java platform for which the <tt>EXE</tt>/<tt>MSI</tt> installable packages have been created. (For example, if an <tt>EXE</tt> or <tt>MSI</tt> installer has been created on a machine with a 64-bit JDK installed, it must be run on a machine with  64-bit Windows installed.)</li>
+		<li>On Windows, both the applications are installed into the <tt>C:\Users\&lt;username&gt;\AppData\Local\</tt> directory and are available in the Start menu. </li></ul>
+		
+		
+        <p><b>Contents</b></p>
+   <p><img src="./Native Packaging in NetBeans IDE_files/netbeans-stamp-80-74.png" class="stamp" alt="Content on this page applies to NetBeans IDE 7.4 or 8.0" title="Content on this page applies to NetBeans IDE 7.4 or 8.0"></p>
+<ul>
+		<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#tool">Installing and Adding Required Tools to the Path</a></li>
+		
+		<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#se">Native Packaging in Java SE Projects</a>
+        <ul>
+        <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#createse">Setting Up a Java SE Project</a></li>
+        <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#enable">Enabling Native Packaging for the Project</a></li>
+		<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#buildse">Building an Application</a></li>
+		<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#instse">Making an EXE Installer</a></li>
+        </ul>
+  </li>
+        <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#fx">Self-Contained Application Packaging in JavaFX Projects</a>
+        <ul>
+          <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#createfx">Creating a JavaFX Project</a></li>
+		  <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#enablefx">Enabling Native Packaging for the Project</a></li>
+		  <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#buildfx">Building an Application</a></li>
+		<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#instfx">Making an MSI Installer</a></li>	
+		</ul>
+		</li>
+<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#check">Verifying the Installable Applications</a></li>		
+<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#see">See Also</a></li>
+</ul>
+   
+   <p><b>To follow this tutorial, you need the following software and resources.</b></p>
+   <table>
+     <tbody>
+       <tr>
+         <th width="208" class="tblheader" scope="col">Software or Resource</th>
+         <th width="218" class="tblheader" scope="col">Version Required</th>
+       </tr>
+       <tr>
+         <td class="tbltd1"><a href="http://netbeans.org/downloads/index.html" target="_blank">NetBeans IDE</a></td>
+         <td class="tbltd1">7.4 or 8.0 </td>
+       </tr>
+       <tr>
+         <td class="tbltd1"><a href="http://www.oracle.com/technetwork/java/javafx/downloads/index.html" target="_blank">Java Development Kit (JDK)</a></td>
+       <td class="tbltd1">7 update 25 (or more recent) or 8 </td>
+       </tr>
+	   <tr>
+         <td class="tbltd1"><a href="http://www.jrsoftware.org/" target="_blank">Inno Setup</a></td>
+         <td class="tbltd1">5.5 or more recent </td>
+	   </tr>
+	   <tr>
+         <td class="tbltd1"><a href="http://wixtoolset.org/" target="_blank">WiX</a></td>
+         <td class="tbltd1">3.7 or more recent </td>
+	   </tr>
+     </tbody>
+   </table>
+   
+	    
+   <div class="indent">
+   <h2><a name="tool"></a>Installing and Adding Required Tools to the Path </h2>
+   <p>To use the IDE's support for native packaging, the following additional tools need to be installed:</p>
+   <ul>
+   <li><a href="http://www.jrsoftware.org/" target="_blank">Inno Setup 5.5</a> (or more recent) for producing EXE installers on Windows is required.</li>
+   <li><a href="http://wixtoolset.org/">WiX 3.7</a> (or more recent) for producing MSI installers on Windows is required.</li>
+   </ul>
+  
+   <p class="notes"><b>Note:</b>  For a list of tools required for making installers for different platforms, see "<a href="http://www.oracle.com/pls/topic/lookup?ctx=nb7400&id=NBDAG2508">Packaging an Application as a Native Installer</a>" in <i>Developing Applications with NetBeans IDE</i>.</p>
+   
+   <p><b>To install Inno Setup:</b></p>
+   <ol>
+     <li>Download <tt>ispack-5.5.3.exe</tt> from the <a href="http://www.jrsoftware.org/isdl.php" target="_blank">Inno Setup Downloads</a> page.</li>
+     <li>Double-click the file to launch the installer.</li>
+     <li>Accept the Inno Setup license agreement and click Next. </li>
+     <li>Follow the instructions in the install wizard for installing Inno Setup. </li>
+     </ol>
+	 <p><b>To install WiX:</b></p>
+     <ol>
+     <li>Download <tt>wix37.exe</tt> from the <a href="http://wix.codeplex.com/releases/view/99514" target="_blank">WiX Toolset - Download</a> page.</li>
+     <li>Double-click the file to launch the installer.</li>
+     <li>Follow the instructions in the install wizard for installing WiX. </li>
+     </ol>
+	 <p><b>To add Inno Setup and/or WiX to the system Path variable:</b></p>
+	 <ol>
+	 <li>On Windows 7, select Start &gt; Computer &gt; System Properties &gt; Advanced system settings.</li>
+	 <li>Select the Advanced tab and click the Environment Variables button.</li>
+	 <li>In the System Variables pane, double-click the Path variable.</li>
+	 <li>In the Edit System Variable dialog box, add a semicolon followed by a new path to the Variable value field (for example, <tt>C:\Program Files (x86)\Inno Setup 5 </tt> or <tt>C:\Program Files (x86)\WiX Toolset v3.6\bin</tt>). </li>
+	 <li>Click OK to close all the open dialog boxes.</li>
+	 </ol>
+	 <p class="notes"><strong>Notes:</strong> </p>
+	 <ul>
+	 <li>To check if the installed tool is in the Path, open the Command Prompt window and type <tt>iscc.exe</tt> for Inno Setup or <tt>candle.exe</tt> for WiX.
+(In case the Command Prompt closes instantly, try specifying <tt>cmd.exe /c cmd.exe /k iscc.exe</tt> or <tt>cmd.exe /c cmd.exe /k candle.exe</tt> respectively.)<br>
+The following figure shows what the Command Prompt should display if Inno Setup is added to the system Path variable. 
+     <p class="align-center">
+		<a href="https://netbeans.org/images_www/articles/74/java/native_pkg/cmd.png" rel="lytebox" title="Command Prompt">
+     <img src="./Native Packaging in NetBeans IDE_files/cmd_small.png" alt="Command Prompt"></a></p></li>
+	 <li>Make sure the IDE is restarted after the  tools are added to the system Path variable.</li>
+	 </ul>
+      
+     
+      
+   </div>
+   <h2><a name="se"></a>Native Packaging in Java SE Projects</h2>
+   <p>To utilize the native packaging support in the IDE, you need to complete the following: </p>
+   <ul>
+   <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#createse">create an IDE project</a> </li>
+   <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#enable">enable the native packaging actions in the project</a> </li>
+   <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#buildse">clean and build the project</a> </li>
+   <li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#instse">package the application in an installer</a> </li>
+   </ul>
+   
+   <div class="indent">
+   <h3><a name="createse"></a>Setting Up a Java SE Project</h3>
+   <p>Before packaging an application in an installer an application itself needs to be created.</p>
+   <p> You will create a new Java SE project with the Anagram game example which is shipped with NetBeans IDE.</p>
+   <p><b>To create an IDE project:</b></p>
+   <ol>
+   <li>In the IDE, choose File &gt; New Project.</li>
+   <li>In the New Project wizard, expand the Samples category and select Java.</li>
+   <li>Choose Anagram Game in the Projects list.  Then click Next. 
+   <p class="align-center">
+		<a href="https://netbeans.org/images_www/articles/74/java/native_pkg/new_javase_prj.png" rel="lytebox" title="Creating a Java SE project">
+     <img src="./Native Packaging in NetBeans IDE_files/new_javase_prj_small.png" alt="Creating a Java SE project"></a></p></li>
+   <li>In the Name and Location panel, leave the default values for the Project Name and Project Location fields. </li>
+   <li>Click Finish.<br> The IDE creates and opens the Java SE project.</li>
+   
+   </ol>
+   
+   <p>To test that the created project works fine, run it by choosing Run &gt; Run Project from the main menu.<br>
+     The Anagrams application should launch and display on your machine.</p>
+	 <p class="align-center">
+		<img src="./Native Packaging in NetBeans IDE_files/anagrams.png" alt="Anagrams application running"></p>
+    <h3><a name="enable"></a>Enabling Native Packaging in the IDE</h3>
+       <p>The native packaging actions are disabled in the IDE by default.</p>
+	   <p>Right-click the AnagramGame project in the Projects window, to check the actions available for the created Java SE project in the IDE: there are no package related actions in the project's context menu.</p>
+	   <p class="align-center">
+		<img src="./Native Packaging in NetBeans IDE_files/context_wo_pkg.png" alt="Context menu without Package as actions"></p>
+       
+       <p><b>To enable native packaging actions for the project:</b></p>
+       <ol>
+     <li>Right-click the project node in the Projects window and select Properties from the context menu.</li>
+     <li>In the Project Properties dialog box, choose the Deployment category and select the Enable Native Packaging Actions in Project Menu option.
+	   <p class="align-center">
+		<a href="https://netbeans.org/images_www/articles/74/java/native_pkg/enable_native_pkg.png" rel="lytebox" title="Enable Native Packaging selected">
+     <img src="./Native Packaging in NetBeans IDE_files/enable_native_pkg_small.png" alt="Enable Native Packaging selected"></a></p></li>
+     <li>Click OK.<br>A Package as command is added to the project's context menu.
+	 <p class="align-center">
+		<img src="./Native Packaging in NetBeans IDE_files/pkg_enabled.png" alt="Package as actions enabled in the Context menu"></p> </li>
+     
+   </ol>
+   <h3><a name="buildse"></a>Building an Application </h3>
+   <p>It is time to clean and build your application for deployment.</p>
+   <p><b>To clean and build your project:</b></p>
+   <ul>
+   <li>Choose Run &gt; Clean and Build Project from the main menu.<br>The IDE displays the results in the Output window.
+   <p class="align-center">
+		<a href="https://netbeans.org/images_www/articles/74/java/native_pkg/output.png" rel="lytebox" title="Output window">
+     <img src="./Native Packaging in NetBeans IDE_files/output_small.png" alt="Output window"></a></p></li></ul>
+	 <p>A <tt>dist</tt> folder that contains a <tt>jar</tt> file is created in the project folder.</p>
+   <h3><a name="instse"></a>Making an <tt>EXE</tt> Installer</h3>
+   <p>The application can now be packaged in an installer for Windows. </p>
+   <p><b>To build an <tt>EXE</tt> installer:</b></p>
+   <ul>
+     <li>Right-click the AnagramGame project and choose Package as &gt; EXE Installer from the context menu. </li>
+   </ul>
+   <p class="notes"><b>Note:</b> The IDE creates an <tt>EXE</tt> installer only if Inno Setup is <a href="https://netbeans.org/kb/docs/java/native_pkg.html#tool">installed and added to the system Path variable</a>.</p>
+   <p>The IDE displays the progress and result of the packaging process in the Output window.</p>
+   <p class="align-center"><a href="https://netbeans.org/images_www/articles/74/java/native_pkg/output_se_exe.png" rel="lytebox" title="Output window displays the progress of building an EXE installer">
+     <img src="./Native Packaging in NetBeans IDE_files/output_se_exe_small.png" alt="Output window displays the progress of building an EXE installer"></a></p>
+	 <p class="notes"><b>Note:</b> The IDE  first logs some progress and then for some time it looks as if nothing is happening - this is exactly the moment when Inno Setup is working in the background. It takes a while for the packaging to get completed.</p>
+	 <p>When the <tt>EXE</tt> installer is ready, it is placed in the <tt>AnagramGame/dist/bundles/</tt> directory. </p>
+	 <p class="align-center"><img src="./Native Packaging in NetBeans IDE_files/anagram_exe.png" alt="Output window displays the progress of building an EXE installer"></p>
+   
+   </div>
+   <h2><a name="fx"></a>Self-Contained Application Packaging in JavaFX Projects</h2>
+    <div class="indent">
+	<p>To build an installable JavaFX application using the native packaging support in the IDE, you need to complete the following: </p>
+	<ul>
+	<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#createfx">create a JavaFX project in the IDE</a></li>
+	<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#enablefx">enable native packaging support for the project</a></li>
+	<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#buildfx">clean and build a JavaFX application</a></li>
+	<li><a href="https://netbeans.org/kb/docs/java/native_pkg.html#instfx">build an installable JavaFX application</a></li>
+	</ul>
+   <h3><a name="createfx"></a>Creating a JavaFX Project</h3>
+   <p>You begin by creating a JavaFX project using the BrickBreaker sample project bundled with the IDE. </p>
+   <p><b>To create a JavaFX  project in the IDE:</b></p>
+   <ol>
+   <li>In the IDE, choose File &gt; New Project.</li>
+   <li>In the New Project wizard, expand the Samples category and select JavaFX.</li>
+   <li>Choose BrickBreaker in the Projects list.  Then click Next. </li>
+   <li>In the Name and Location panel, leave the default values for the Project Name, Project Location, and JavaFX Platform fields. 
+     <p class="align-center">
+		<a href="https://netbeans.org/images_www/articles/74/java/native_pkg/new_javafx_prj.png" rel="lytebox" title="Creating a JavaFX project">
+     <img src="./Native Packaging in NetBeans IDE_files/new_javafx_prj_small.png" alt="Creating a JavaFX project"></a></p></li>
+   <li>Click Finish.
+   <br>
+   The BrickBreaker JavaFX project displays in the Projects window in the IDE.</li>
+   </ol>
+    <p>To test that the created project works fine, run it by choosing Run &gt; Run Project(BrickBreaker) from the main menu.<br>
+     The Brick Breaker application should launch and display on your machine.</p>
+	
+		<p class="align-center">
+		<a href="https://netbeans.org/images_www/articles/74/java/native_pkg/brickbreaker.png" rel="lytebox" title="Brick Breaker application running">
+     <img src="./Native Packaging in NetBeans IDE_files/brickbreaker_small.png" alt="Brick Breaker application running"></a></p>
+   <h3><a name="enablefx"></a>Enabling Native Packaging in the Project</h3>
+   <p>To use the native packaging support in the IDE for your project, you need to enable it first.</p>
+   <p> If you right-click the Brick Breaker project, you will see no native packaging related actions in it. </p>
+    <p class="align-center">
+		<img src="./Native Packaging in NetBeans IDE_files/javafx_wo_pkg.png" alt="Context menu without Package as actions"></p>
+   <p><b>To enable native packaging actions in the project context menu:</b></p>
+       <ol>
+     <li>Right-click the project node in the Projects window and select Properties from the context menu.</li>
+     <li>In the Project Properties dialog box, choose  Deployment in the Build category and select the Enable Native Packaging option.
+	   <p class="align-center">
+		<a href="https://netbeans.org/images_www/articles/74/java/native_pkg/enable_native_pkg_fx.png" rel="lytebox" title="Enable Native Packaging selected in a JavaFX project">
+     <img src="./Native Packaging in NetBeans IDE_files/enable_native_pkg_fx_small.png" alt="Enable Native Packaging selected in a JavaFX project"></a></p></li>
+     <li>Click OK.<br>The Package as item is added to the project's context menu.
+	 <p class="align-center">
+		<img src="./Native Packaging in NetBeans IDE_files/pkg_fx_enabled.png" alt="Package as actions enabled in the context menu of the JavaFX project"></p> </li>
+     
+   </ol>
+   <h3><a name="buildfx"></a>Building an Application </h3>
+   <p>Your JavaFX application is now ready to be cleaned and built.</p>
+   <p><b>To clean and build your project:</b></p>
+   <ul>
+   <li>Choose Run &gt; Clean and Build Project from the main menu.<br>The IDE displays the results in the Output window.
+ </li></ul>
+ <p class="notes"><b>Note:</b> If the build is successful but the IDE displays <tt>warning: [options] bootstrap class path not set in conjunction with -source 1.6</tt>  in the Output window, the Source/Binary format needs to be set to JDK 8 in the project properties and the project needs to be cleaned and built again as follows: </p>
+ <ol>
+   <li>Right-click the BrickBreaker project in the Projects windows and choose Properties. </li>
+   <li>In the Project Properties dialog box, select the Sources category. </li>
+   <li>Set the Source/Binary format  to  JDK 8 and click OK. </li>
+   <li>Right-click BrickBreaker in the Projects window and choose Clean and Build from the context menu.</li>
+ </ol> 
+ 
+   <h3><a name="instfx"></a>Making an <tt>MSI</tt> Installer</h3>
+   <p>The application can now be wrapped into a Windows-specific installable package. </p>
+   <p><b>To build an <tt>MSI</tt> installer:</b></p>
+   <ul>
+     <li>Right-click the BrickBreaker project and choose Package as &gt; MSI Installer from the context menu. </li>
+   </ul>
+   <p class="notes"><b>Note:</b> The IDE creates an <tt>MSI</tt> installer only if WiX is <a href="https://netbeans.org/kb/docs/java/native_pkg.html#tool">installed and added to the system Path variable</a>.</p>
+   <p>The IDE displays the progress and result of the packaging process in the Output window.</p>
+   <p class="align-center"><a href="https://netbeans.org/images_www/articles/74/java/native_pkg/output_fx_msi.png" rel="lytebox" title="Output window displays the progress of building an MSI installer">
+     <img src="./Native Packaging in NetBeans IDE_files/output_fx_msi_small.png" alt="Output window displays the progress of building an MSI installer"></a></p>
+	 <p class="notes"><b>Note:</b> The IDE  first logs some progress and then for some time it looks as if nothing is happening - this is exactly the moment when WiX is working in the background. It takes a while for the packaging to get completed.</p>
+	 <p>The installable JavaFX application is located in the <tt>BrickBreaker/dist/bundles/</tt> directory. </p>
+	 <p class="align-center"><img src="./Native Packaging in NetBeans IDE_files/brickbreaker_msi.png" alt="MSI installer"></p>
+   </div>
+   <h2><a name="check">Verifying the Installable Applications</a></h2>
+   When the <tt>AnagramGame-1.0.exe</tt> and <tt>BrickBreaker-1.0.msi</tt> installers are done, you need to check which directory the Anagram and BrickBreaker applications  are installed natively into.
+   
+   <p><b>To check the installers:</b></p>
+   <ol>
+   <li>Browse to the installer file (<tt>AnagramGame-1.0.exe</tt> or <tt>BrickBreaker-1.0.msi</tt>) on your hard drive.</li>
+   <li>Double-click to run the installer. </li>
+   </ol>
+   <p>Both the applications should be installed into the <tt>C:\Users\&lt;username&gt;\AppData\Local\</tt> directory and be available in the Start menu. </p>
+   <h2><a name="see"></a>See Also</h2>
+   <ul>
+    
+   <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG2508">Packaging an Application as a Native Installer</a> in <i>Developing Applications with NetBeans IDE</i></li>
+   <li><a href="http://docs.oracle.com/javafx/2/deployment/self-contained-packaging.htm">Deploying JavaFX Applications: Self-Contained Application Packaging</a></li>
+   <li><a href="http://docs.oracle.com/javase/7/docs/technotes/guides/jweb/packagingAppsForMac.html">Packaging a Java App for Distribution on a Mac</a></li>
+   </ul>
+   
+   <div class="feedback-box"><a href="https://netbeans.org/about/contact_form.html?to=3&subject=Feedback:%20Native%20Packaging%20In%20NetBeans%20IDE">Send Feedback on This Tutorial</a></div>
+<br style="clear:both;">
+
+   <p><a href="https://netbeans.org/kb/trails/matisse.html">Back to the Learning Trail</a></p>
+   
+</div>
+</td><td class="valign-top rcol b-left" id="rc">
+<div class="b-bottom f-page-cell">
+<div style="padding-bottom:20px;" class="align-center"><a href="https://netbeans.org/downloads/index.html" class="nobg"><img src="./Native Packaging in NetBeans IDE_files/download-nb-button3.gif" width="165" height="27" alt="Download NetBeans" title="Download NetBeans" border="0"></a></div>
+<img src="./Native Packaging in NetBeans IDE_files/training_smaller.gif" width="34" height="41" class="float-left" alt="get training on NetBeans">
+<a href="https://netbeans.org/kb/training.html"><h1 class="blue normal" style="margin:7px 0px 0px 44px;">Training</h1></a><br class="clear">
+<div class="rrrarticle"><div class="rarticletitle"><a href="http://www.sun.com/training/catalog/courses/SL-275-SE6.xml?intcmp=1366">Java Programming Language</a></div></div>
+</div>
+
+<div class="b-bottom f-page-cell">
+<img src="./Native Packaging in NetBeans IDE_files/support_smaller.gif" width="34" height="41" class="float-left" alt="get support for the NetBeans">
+<a href="https://netbeans.org/kb/support.html"><h1 class="blue normal" style="margin:7px 0px 0px 44px;">Support</h1></a><br class="clear">
+<script type="text/javascript" language="javascript">
+renderRandomSupportLinks();
+</script><div class="rrrarticle"><div class="rarticletitle"><a href="http://www.oracle.com/us/support/development-tools-080025.html">Oracle Development Tools Support Offering for NetBeans IDE</a></div></div>
+</div>
+
+<div class="f-page-cell b-bottom">
+<h2 style="border:0px;">Documentation</h2>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/java-se.html">General Java Development</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/tools.html">External Tools and Services</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/matisse.html">Java GUI Applications</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/java-ee.html">Java EE &amp; Java Web Development</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/web.html">Web Services Applications</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/platform.html">NetBeans Platform (RCP) and Module Development </a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/php.html">PHP and HTML5 Applications</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/cnd.html">C/C++ Applications</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/trails/mobility.html">Mobile Applications</a></div></div>
+<br>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/samples/index.html">Sample Applications</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/docs/screencasts.html">Demos and Screencasts</a></div></div>
+</div>
+
+<div class="f-page-cell b-bottom">
+<h2 style="border:0px;">More</h2>
+<div class="rrrarticle"><div class="rarticletitle"><a href="http://wiki.netbeans.org/NetBeansUserFAQ">FAQs</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="http://wiki.netbeans.org/wiki/view/CommunityDocs">Contribute Documentation!</a></div></div>
+<div class="rrrarticle"><div class="rarticletitle"><a href="https://netbeans.org/kb/previous.html">Docs for Earlier Releases</a></div></div>
+</div>
+
+					</td>
+					</tr><!-- end main content -->
+					</tbody></table><!-- end main content table -->
+					</div><!-- end fixed-contentbox-ie -->
+				 <!-- end fixed-contentarea --><div id="ftr">
+                <ul class="float-right" id="social-media">
+                    <li><a href="http://www.facebook.com/NetBeans"><img src="./Native Packaging in NetBeans IDE_files/icin_facebook.png" width="30" height="30" alt="facebook"></a></li>
+                    <li><a href="http://www.youtube.com/user/netbeansvideos"><img src="./Native Packaging in NetBeans IDE_files/icin_youtube.png" width="30" height="30" alt="youtube"></a></li>
+                    <li><a href="https://plus.google.com/105597468329838196909/"><img src="./Native Packaging in NetBeans IDE_files/icin_google.png" width="30" height="30" alt="google+"></a></li>
+                    <li><a href="https://twitter.com/netbeans"><img src="./Native Packaging in NetBeans IDE_files/icin_twitter.png" width="30" height="30" alt="twitter"></a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://netbeans.org/sitemaps/www_map.html">SiteMap</a></li>
+                    <li><a href="https://netbeans.org/about/index.html">About Us</a></li>
+                    <li><a href="https://netbeans.org/about/contact.html">Contact</a></li>
+                    <li><a href="https://netbeans.org/about/legal/index.html">Legal &amp; Licences</a></li>
+                </ul>
+
+    </div>
+   <div id="tof" class="align-right">
+      By use of this website, you agree to the <a href="https://netbeans.org/about/legal/terms-of-use.html">NetBeans Policies and Terms of Use</a>.
+      © 2016, Oracle Corporation and/or its affiliates. Sponsored by <img src="./Native Packaging in NetBeans IDE_files/logo_oracle.png" width="56" height="8" alt="Oracle logo">
+   </div>
+<div id="companion-projects">
+    <script type="text/javascript">
+    document.write(renderCompanionProjectIcons());
+    </script>
+</div>
+
+<!-- Begin SiteCatalyst code -->
+<script language="JavaScript" src="./Native Packaging in NetBeans IDE_files/s_code_remote.js" type="text/javascript"></script><script type="text/javascript" src="./Native Packaging in NetBeans IDE_files/metrics_group1.js"></script>
+<!-- End SiteCatalyst code -->
+
+        </div>
+	
+</body></html>

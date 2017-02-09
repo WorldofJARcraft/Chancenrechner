@@ -1,0 +1,7 @@
+https://pixabay.com/static/uploads/photo/2012/04/24/16/43/targets-40383_640.png
+http://www.schuetzenbedarf-baur.com/images/Krueger%20Pistole%2025-50%20m%20C50%203101_100.jpg
+http://code.makery.ch/blog/javafx-2-snapshot-as-png-image/
+http://stackoverflow.com/questions/16128423/how-to-update-the-label-box-every-2-seconds-in-java-fx
+http://tomasmikula.github.io/blog/2014/06/04/timers-in-javafx-and-reactfx.html
+http://stackoverflow.com/questions/16764549/timers-and-javafx
+https://de.wikibooks.org/wiki/Java_Standard:_Datum

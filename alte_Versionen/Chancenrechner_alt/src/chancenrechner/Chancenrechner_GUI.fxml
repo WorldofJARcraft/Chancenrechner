@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="701.0" maxWidth="1025.0" minHeight="699.0" minWidth="1023.0" prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chancenrechner.Chancenrechner_GUIController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <TextField fx:id="Schuesse" alignment="CENTER_RIGHT" layoutX="714.0" layoutY="14.0" onAction="#Kreiszeichnen" prefHeight="25.0" prefWidth="84.0" text="10" />
+    <TextField fx:id="Ziel" alignment="CENTER_RIGHT" layoutX="714.0" layoutY="49.0" onAction="#Kreiszeichnen" prefWidth="84.0" text="82" />
+    <Label fx:id="Label_1" layoutX="799.0" layoutY="17.0" text="er Serie" />
+    <Label fx:id="Label_3" layoutX="799.0" layoutY="53.0" text="Ringe sind Ziel" />
+    <TextArea fx:id="Schuetze" editable="false" layoutX="714.0" layoutY="461.0" prefHeight="225.0" prefWidth="294.0" wrapText="true" />
+    <Button fx:id="Löschen" layoutX="714.0" layoutY="78.0" mnemonicParsing="false" onAction="#Löschen" prefHeight="59.0" prefWidth="84.0" text="Start" />
+    <Pane fx:id="flaeche" onMouseClicked="#mausklick" onMouseDragged="#mausgezogen" prefHeight="700.0" prefWidth="700.0">
+         <children>
+            <ImageView fx:id="imageview" fitHeight="684.0" fitWidth="685.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Bilder/Zielscheibe.jpg" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Label layoutX="714.0" layoutY="444.0" text="Empfehlungen" />
+      <Label layoutX="714.0" layoutY="266.0" text="Zeitsituation:" />
+      <TextField fx:id="Zeitanzeiger" editable="false" layoutX="713.0" layoutY="283.0" prefHeight="25.0" prefWidth="175.0" text="12 Minuten 0 Sekunden übrig" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+Bitte geben Sie Name oder ID des Schützen ein. Hendrik
+Schuesse: 20
+Vorgabe: 135
+Das Ziel: durschschnittlich 6.75 Ringe.
+30 Minuten 0 Sekunden übrig
+
+Schuss 1: 3
+Gesamtringzahl: 3;
+Naechster Schuss:
+Empfehlung: 7 oder mehr Ringe.
+Schuss 2: 4
+Gesamtringzahl: 7;
+Letzter Schuss: 4
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 3: 1
+Gesamtringzahl: 8;
+Letzter Schuss: 1
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 4: 9
+Gesamtringzahl: 17;
+Letzter Schuss: 9
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 5: 7
+Gesamtringzahl: 24;
+Letzter Schuss: 7
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 6: 6
+Gesamtringzahl: 30;
+Letzter Schuss: 6
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 7: 6
+Gesamtringzahl: 36;
+Letzter Schuss: 6
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 8: 9
+Gesamtringzahl: 45;
+Letzter Schuss: 9
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 9: 8
+Gesamtringzahl: 53;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 10: 6
+Gesamtringzahl: 59;
+Letzter Schuss: 6
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 11: 8
+Gesamtringzahl: 67;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 12: 8
+Gesamtringzahl: 75;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 13: 8
+Gesamtringzahl: 83;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 14: 10
+Gesamtringzahl: 93;
+Letzter Schuss: 10
+Naechster Schuss:
+Empfehlung: 7 oder mehr Ringe.
+Schuss 15: 6
+Gesamtringzahl: 99;
+Letzter Schuss: 6
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 16: 8
+Gesamtringzahl: 107;
+Letzter Schuss: 8
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 17: 6
+Gesamtringzahl: 113;
+Letzter Schuss: 6
+Naechster Schuss: mindestens 2 Ringe;
+Empfehlung: 8 oder mehr Ringe.
+Schuss 18: 8
+Gesamtringzahl: 121;
+Letzter Schuss: 8
+Naechster Schuss: mindestens 4 Ringe;
+Empfehlung: 8 oder mehr Ringe.
+Schuss 19: 8
+Gesamtringzahl: 129;
+Letzter Schuss: 8
+Sie muessen noch 6 Ringe erzielen. Dies ist Ihr letzter Schuss.
+Schuss 20: 9
+
+Sie haben 138 Ringe erzielt und dafür 21 Minuten und 55 Sekunden gebraucht.
+Sie haben durchschnittlich 6.9 Ringe erzielt.
+Vorgabe erreicht.

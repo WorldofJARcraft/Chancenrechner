@@ -1,0 +1,49 @@
+Programm Chancenrechner Version 0.5 ALPHA
+Entwickler: Eric Ackermann- Carl-Zeiss-Gymnasium Jena
+Experimentelle Programmversion, Nutzung auf eigene Gefahr.
+Schuetze: Alex
+Serie: 10
+Ringe zu erreichen: 78
+Das Ziel: durschschnittlich 7.8 Ringe.
+
+Schuss 1: 9
+Gesamtringzahl: 9;
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 2: 10
+Gesamtringzahl: 19;
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 3: 7
+Gesamtringzahl: 26;
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 4: 8
+Gesamtringzahl: 34;
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 5: 7
+Gesamtringzahl: 41;
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 6: 7
+Gesamtringzahl: 48;
+Naechster Schuss:
+Empfehlung: 8 oder mehr Ringe.
+Schuss 7: 8
+Gesamtringzahl: 56;
+Naechster Schuss: mindestens 2 Ringe;
+Empfehlung: 8 oder mehr Ringe.
+Schuss 8: 8
+Gesamtringzahl: 64;
+Naechster Schuss: mindestens 4 Ringe;
+Empfehlung: 8 oder mehr Ringe.
+Schuss 9: 7
+Gesamtringzahl: 71;
+Sie muessen noch 7 Ringe erzielen. Dies ist Ihr letzter Schuss.
+Schuss 10: 8
+Gesamtringzahl: 79;
+Sie haben 79 Ringe erzielt und dafuer 1 Minuten 25 Sekunden gebraucht.
+Sie haben durchschnittlich 7.9 Ringe erzielt.
+Herzlichen Glueckwunsch, Sie haben Ihre Zielringzahl erreicht.
+
